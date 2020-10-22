@@ -1,0 +1,372 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    min-width: 1000px;
+    min-height: 500px; /*urcite nie*/
+    font-family: Calibri;
+
+    /*https://htmlcolorcodes.com*/
+    /*background-color: #E8F8F5;*/
+    /*background-color: #FDEBD0;*/
+    /*background-color: #EBF5FB;*/
+
+}
+
+div#mainContainer {
+    display: flex;
+    align-items: flex-start;
+
+}
+
+div#menu, #legenda {
+    text-align: center;
+    font-size: 1.2vw;
+    margin: 0 auto;
+    overflow-y: auto;
+    /*background-color: #DDD;*/
+}
+
+div#menu {
+    max-height: 200vh;
+}
+
+div#legenda {
+    max-height: 85vh;
+}
+
+div#centerBigDiv {
+    width: 60%;
+
+    margin: 0 auto;
+}
+
+div#vysvetlivky {
+    position: relative;
+    text-align: center;
+    /*background-color: #DDD;*/
+    font-size: 1.2vw;
+}
+
+
+
+div#radio, #volneNosice, #nepohyblive, #javy {
+    /*https://stackoverflow.com/questions/3355058/can-i-center-a-ul-with-left-aligned-lis*/
+    text-align: left;
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+}
+
+#spolu{
+    display: block;
+}
+div#vaChar, #band, #concentrationLegend {
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+}
+
+div#animationContainer {
+    background-color: white;
+    position:relative;
+
+}
+#photo_cmos {
+    position: absolute;
+    top:0%;
+    left:65%;
+    width: 25%;
+    height: 30%;
+
+}
+#photo_log_obv{
+    position: absolute;
+    top:0%;
+    left:60%;
+    width: 30%;
+    height: 30%;
+ }
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+label#menuLabel, #legendaLabel, #vysvetlivkyLabel {
+    line-height: 15px;
+    font-weight: bold;
+    font-size: larger;
+
+}
+
+#legendaSVK{
+    line-height: 15px;
+    font-weight: bold;
+    font-size: larger;
+}
+#legendaENG{
+    line-height: 15px;
+    font-weight: bold;
+    font-size: larger;
+    display: none;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.8vw;
+    vertical-align: middle;
+}
+
+select#connection, #concentration {
+    width: 80%;
+    text-align: center;
+    font-size: 1vw;
+    vertical-align: middle;
+
+}
+
+select#concentration {
+    width: 60%;
+}
+
+input[type=radio] {
+    width: 1vw;
+    height: 1vw;
+}
+
+option {
+    text-align: center;
+}
+
+.obrazky {
+    width: 1.5vw;
+    height: 1.5vw;
+    vertical-align: middle;
+}
+
+.legendaText {
+    line-height: 1.5vw;
+    padding: 0.3vw;
+
+}
+.legendaTextenglish{
+    line-height: 1.5vw;
+    padding: 0.3vw;
+    display: none;
+
+
+}
+.legendaTextslovak{
+    line-height: 1.5vw;
+    padding: 0.3vw;
+
+ }
+#buttonhelp_eng{
+    display: block;
+    font-size: 1.1vw;
+    margin-left:2.8em;
+}
+#buttonhelp_svk{
+    font-size: 1.1vw;
+    margin-left:2.8em;
+
+}
+
+#buttoncmos_svk{
+    font-size: 1.1vw;
+    margin-left:2.6em;
+}
+#buttoncmos_eng{
+    display: block;
+    font-size: 1.1vw;
+    margin-left:2.6em;
+}
+
+#buttonlogobv_svk{
+    font-size: 1.1vw;
+    margin-left:0.7em;
+}
+#buttonlogobv_eng{
+    display: block;
+    font-size: 1.1vw;
+    margin-left:0.7em;
+}
+
+
+<!--                             -->
+
+
+#radiobuttonhelp_svk{
+    font-size: 1.1vw;
+    margin-left:3.2em;
+
+}
+
+
+#radiobuttonhelp_eng{
+    display: block;
+    font-size: 1.1vw;
+    margin-left:3.1em;
+}
+
+
+#radiobuttoncmos_svk{
+    font-size: 1.1vw;
+    margin-left:3.1em;
+}
+#radiobuttoncmos_eng{
+    display: block;
+    font-size: 1.1vw;
+    margin-left:2.9em;
+}
+
+#radiobuttonlogobv_svk{
+    font-size: 1.1vw;
+    margin-left:1.3em;
+}
+#radiobuttonlogobv_eng{
+    display: block;
+    font-size: 1.1vw;
+    margin-left:1em;
+}
+#radiobuttonspat{
+    font-size: 1.1vw;
+    margin:0.8vw;
+}
+#radiobuttondalej{
+    font-size: 1.1vw;
+    margin:0.8vw;
+
+}
+
+
+
+
+
+
+
+
+div#volneNosice, #nepohyblive, #javy, #vaChar, #band, #concentrationLegend {
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+img#speaker {
+    display: inline-block;
+    width: 1.5vw;
+    height: 1.5vw;
+    vertical-align: middle;
+    padding-bottom: 0.3vw;
+    cursor: pointer;
+}
+#odsek2{
+    margin-left:3.4em;
+}
+#otazky{
+   text-align: center;
+    font-size: 1.5vw;
+    top: 50%;
+
+}
+#otazky2{
+    text-align: center;
+    font-size: 1.5vw;
+    top: 20%;
+
+}
+.odpovede_svk{
+    margin: auto;
+}
+.odpovede_eng{
+    margin: auto;
+    display: none;
+}
+#check{
+    font-size: 1.5vw;
+    top: 50%;
+}
+.udd{
+    color:lime;
+    vertical-align: middle;
+}
+
+#buttonzoom{
+    font-size: 1.1vw;
+    color:red;
+}
+#buttonspat{
+    font-size: 1.1vw;
+    margin:0.8vw;
+}
+#buttondalej{
+    font-size: 1.1vw;
+    margin:0.8vw;
+
+}
+#buttondalej1{
+    font-size: 1.1vw;
+    margin:0.8vw;
+    color:red;
+
+}
+#mySelect{
+    font-size: 1.5rem;
+}
+#mySelect2{
+    font-size: 1.5rem;
+}
+#photo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:100%;
+}
+#napatie{
+    line-height: 1.5vw;
+    padding: 0.3vw;
+}
+#select{
+    font-size: 1.5rem;
+}
+img#speaker {
+    display: inline-block;
+    width: 1.5vw;
+    height: 1.5vw;
+    vertical-align: middle;
+    padding-bottom: 0.3vw;
+    cursor: pointer;
+}
+
+#nadpis_okno{
+    font-size: 2rem;
+}
+mark {
+    background-color: yellow;
+    color: black;
+}
+#odsek{
+    margin-left:7.2em;
+}
+.panel-default > .panel-heading, .panel-primary > .panel-heading {
+    color: #fff;
+    background-color: #333;
+    border-color: #ddd;
+
+}
+
+.panel-heading div {
+    margin-top: -18px;
+    font-size: 55px;
+}
+.panel-heading div span{
+    margin-left:5px;
+}
+
