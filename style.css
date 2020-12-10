@@ -5,41 +5,21 @@ html {
 
 body {
     min-width: 1000px;
-    min-height: 500px; /*urcite nie*/
-    font-family: Calibri;
-
-    /*https://htmlcolorcodes.com*/
-    /*background-color: #E8F8F5;*/
-    /*background-color: #FDEBD0;*/
-    /*background-color: #EBF5FB;*/
-
+    min-height: 500px;
+    font-family: Calibri, sans-serif;
 }
 
 div#mainContainer {
     display: flex;
     align-items: flex-start;
-
-}
-
-div#menu, #legenda {
-    text-align: center;
-    font-size: 1.2vw;
-    margin: 0 auto;
-    overflow-y: auto;
-    /*background-color: #DDD;*/
-}
-
-div#menu {
-    max-height: 200vh;
 }
 
 div#legenda {
-    max-height: 85vh;
+    max-height: 100vh;
 }
 
 div#centerBigDiv {
     width: 60%;
-
     margin: 0 auto;
 }
 
@@ -50,9 +30,10 @@ div#vysvetlivky {
     font-size: 1.2vw;
 }
 
-
-
-div#radio, #volneNosice, #nepohyblive, #javy {
+div#radio,
+#volneNosice,
+#nepohyblive,
+#javy {
     /*https://stackoverflow.com/questions/3355058/can-i-center-a-ul-with-left-aligned-lis*/
     text-align: left;
     display: -moz-inline-stack;
@@ -61,10 +42,13 @@ div#radio, #volneNosice, #nepohyblive, #javy {
     *display: inline;
 }
 
-#spolu{
+#spolu {
     display: block;
 }
-div#vaChar, #band, #concentrationLegend {
+
+div#vaChar,
+#band,
+#concentrationLegend {
     display: -moz-inline-stack;
     display: inline-block;
     zoom: 1;
@@ -73,25 +57,24 @@ div#vaChar, #band, #concentrationLegend {
 
 div#animationContainer {
     background-color: white;
-    position:relative;
-
+    position: relative;
 }
+
 #photo_cmos {
     position: absolute;
-    top:0%;
-    left:65%;
+    top: 0%;
+    left: 65%;
     width: 25%;
     height: 30%;
-
 }
-#photo_log_obv{
+
+#photo_log_obv {
     position: absolute;
-    top:0%;
-    left:60%;
+    top: 0%;
+    left: 60%;
     width: 30%;
     height: 30%;
- }
-
+}
 
 ul {
     list-style-type: none;
@@ -100,23 +83,18 @@ ul {
     overflow: hidden;
 }
 
-label#menuLabel, #legendaLabel, #vysvetlivkyLabel {
-    line-height: 15px;
-    font-weight: bold;
-    font-size: larger;
-
-}
-
-#legendaSVK{
+label#menuLabel,
+#legendaLabel,
+#vysvetlivkyLabel {
     line-height: 15px;
     font-weight: bold;
     font-size: larger;
 }
-#legendaENG{
+
+#legendMainTitle {
     line-height: 15px;
     font-weight: bold;
     font-size: larger;
-    display: none;
 }
 
 h2 {
@@ -125,12 +103,12 @@ h2 {
     vertical-align: middle;
 }
 
-select#connection, #concentration {
+select#connection,
+#concentration {
     width: 80%;
     text-align: center;
     font-size: 1vw;
     vertical-align: middle;
-
 }
 
 select#concentration {
@@ -147,114 +125,109 @@ option {
 }
 
 .obrazky {
-    width: 1.5vw;
-    height: 1.5vw;
+    width: 18px;
+    height: 18px;
     vertical-align: middle;
 }
 
-.legendaText {
+.legendText {
     line-height: 1.5vw;
     padding: 0.3vw;
-
+    font-size: 16px;
 }
-.legendaTextenglish{
-    line-height: 1.5vw;
-    padding: 0.3vw;
+
+.legendTitle {
+    line-height: 1.2;
+    font-size: 19px;
+    padding: 0.3em;
+    font-weight: bold;
+}
+
+#buttonhelp_eng {
     display: none;
-
-
+    font-size: 1.1vw;
+    margin-left: 2.8em;
 }
-.legendaTextslovak{
-    line-height: 1.5vw;
-    padding: 0.3vw;
 
- }
-#buttonhelp_eng{
+#buttonhelp_svk {
     display: block;
     font-size: 1.1vw;
-    margin-left:2.8em;
-}
-#buttonhelp_svk{
-    font-size: 1.1vw;
-    margin-left:2.8em;
-
+    margin-left: 2.8em;
 }
 
-#buttoncmos_svk{
-    font-size: 1.1vw;
-    margin-left:2.6em;
-}
-#buttoncmos_eng{
+#buttoncmos_svk {
     display: block;
     font-size: 1.1vw;
-    margin-left:2.6em;
+    margin-left: 2.6em;
 }
 
-#buttonlogobv_svk{
+#buttoncmos_eng {
+    display: none;
     font-size: 1.1vw;
-    margin-left:0.7em;
+    margin-left: 2.6em;
 }
-#buttonlogobv_eng{
+
+#buttonlogobv_svk {
     display: block;
     font-size: 1.1vw;
-    margin-left:0.7em;
+    margin-left: 0.7em;
 }
 
-
-<!--                             -->
-
-
-#radiobuttonhelp_svk{
+#buttonlogobv_eng {
+    display: none;
     font-size: 1.1vw;
-    margin-left:3.2em;
-
+    margin-left: 0.7em;
 }
 
+<!-- -->#radiobuttonhelp_svk {
+    font-size: 1.1vw;
+    margin-left: 3.2em;
+}
 
-#radiobuttonhelp_eng{
+#radiobuttonhelp_eng {
+    display: none;
+    font-size: 1.1vw;
+    margin-left: 3.1em;
+}
+
+#radiobuttoncmos_svk {
+    font-size: 1.1vw;
+    margin-left: 3.1em;
+}
+
+#radiobuttoncmos_eng {
     display: block;
     font-size: 1.1vw;
-    margin-left:3.1em;
+    margin-left: 2.9em;
 }
 
-
-#radiobuttoncmos_svk{
+#radiobuttonlogobv_svk {
     font-size: 1.1vw;
-    margin-left:3.1em;
+    margin-left: 1.3em;
 }
-#radiobuttoncmos_eng{
+
+#radiobuttonlogobv_eng {
     display: block;
     font-size: 1.1vw;
-    margin-left:2.9em;
+    margin-left: 1em;
 }
 
-#radiobuttonlogobv_svk{
+#radiobuttonspat {
     font-size: 1.1vw;
-    margin-left:1.3em;
+    margin: 0.8vw;
 }
-#radiobuttonlogobv_eng{
-    display: block;
+
+#radiobuttondalej {
     font-size: 1.1vw;
-    margin-left:1em;
-}
-#radiobuttonspat{
-    font-size: 1.1vw;
-    margin:0.8vw;
-}
-#radiobuttondalej{
-    font-size: 1.1vw;
-    margin:0.8vw;
-
+    margin: 0.8vw;
 }
 
-
-
-
-
-
-
-
-div#volneNosice, #nepohyblive, #javy, #vaChar, #band, #concentrationLegend {
+div#volneNosice,
+#nepohyblive,
+#javy,
+#vaChar,
+#band,
+#concentrationLegend {
     padding-top: 1vw;
     padding-bottom: 1vw;
 }
@@ -267,75 +240,87 @@ img#speaker {
     padding-bottom: 0.3vw;
     cursor: pointer;
 }
-#odsek2{
-    margin-left:3.4em;
+
+#odsek2 {
+    margin-left: 3.4em;
 }
-#otazky{
-   text-align: center;
+
+#otazky {
+    text-align: center;
     font-size: 1.5vw;
     top: 50%;
-
 }
-#otazky2{
+
+#otazky2 {
     text-align: center;
     font-size: 1.5vw;
     top: 20%;
-
 }
-.odpovede_svk{
+
+.odpovede_svk {
     margin: auto;
 }
-.odpovede_eng{
+
+.odpovede_eng {
     margin: auto;
     display: none;
 }
-#check{
+
+#check {
     font-size: 1.5vw;
     top: 50%;
 }
-.udd{
-    color:lime;
+
+.udd {
+    color: lime;
     vertical-align: middle;
 }
 
-#buttonzoom{
+#buttonzoom {
     font-size: 1.1vw;
-    color:red;
+    color: red;
 }
-#buttonspat{
-    font-size: 1.1vw;
-    margin:0.8vw;
-}
-#buttondalej{
-    font-size: 1.1vw;
-    margin:0.8vw;
 
-}
-#buttondalej1{
+#buttonspat {
     font-size: 1.1vw;
-    margin:0.8vw;
-    color:red;
-
+    margin: 0.8vw;
 }
-#mySelect{
+
+#buttondalej {
+    font-size: 1.1vw;
+    margin: 0.8vw;
+}
+
+#buttondalej1 {
+    font-size: 1.1vw;
+    margin: 0.8vw;
+    color: red;
+}
+
+#mySelect {
     font-size: 1.5rem;
 }
-#mySelect2{
+
+#mySelect2 {
     font-size: 1.5rem;
 }
+
 #photo {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width:100%;
+    width: 100%;
 }
-#napatie{
+
+#napatie {
     line-height: 1.5vw;
     padding: 0.3vw;
 }
-#select{
+
+#select {
     font-size: 1.5rem;
 }
+
 img#speaker {
     display: inline-block;
     width: 1.5vw;
@@ -345,28 +330,53 @@ img#speaker {
     cursor: pointer;
 }
 
-#nadpis_okno{
+#nadpis_okno {
     font-size: 2rem;
 }
+
 mark {
     background-color: yellow;
     color: black;
 }
-#odsek{
-    margin-left:7.2em;
+
+#odsek {
+    margin-left: 7.2em;
 }
-.panel-default > .panel-heading, .panel-primary > .panel-heading {
+
+.panel-default>.panel-heading,
+.panel-primary>.panel-heading {
     color: #fff;
     background-color: #333;
     border-color: #ddd;
-
 }
 
 .panel-heading div {
     margin-top: -18px;
     font-size: 55px;
 }
-.panel-heading div span{
-    margin-left:5px;
+
+.panel-heading div span {
+    margin-left: 5px;
 }
 
+#show-legend-button {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+#legend-placeholder {
+    position: absolute;
+    display: none;
+    width: 80vw;
+    height: 85vh;
+    top: 50%;
+    left: 50%;
+    /* background: #ffffff; */
+    /* box-shadow: 17px 17px 12px 0px #ececec; */
+    transform: translate(-50%, -50%);
+}
+
+#legend-placeholder.active {
+    display: block;
+}
