@@ -5,7 +5,7 @@
 
 // imports
 import {NoobAnimation} from "./modules/animation_objects/noob.js";
-import {LanguageElements} from './modules/common.js';
+import {LanguageElements} from './modules/language.js';
 
 // shared objects in application
 const languageElements = new LanguageElements();
