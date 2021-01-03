@@ -1,56 +1,64 @@
 <!DOCTYPE HTML>
-<html lang="sk">
+<html lang="en">
 
 <head>
     <title>Intro</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- ### favicon ### -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favis/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favis/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favis/favicon-16x16.png">
+    <link rel="manifest" href="/images/favis/site.webmanifest">
+    <link rel="mask-icon" href="/images/favis/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
     <!-- ### css ### -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="/menu/menu_styles.css" type="text/css"> -->
-    <link rel="stylesheet" href="/style.css" type="text/css">
+    <link rel="stylesheet" href="/styles/main.css" type="text/css">
 
     <!-- ### scripts ### -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
     </script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js">
-    </script> -->
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
-    <script src="/funkcie/svg.js">
-    </script>
-    <script src="/funkcie/redirect.js">
-    </script>
-    <script src="/funkcie/classes.js">
-    </script>
 </head>
 
 <body>
-    <div id="menu-placeholder"></div>
-    <header>
-        <h2>
-            <div class="titleSlovak"><b>Využitie CMOS v praxi</b></div>
-            <div class="titleEnglish"><b>Usage of CMOS in practice</b></div>
-        </h2>
-    </header>
-    <div id="mainContainer">
-        <div id="centerBigDiv">
-            <img id="photo" src="uvod_foto.png" alt="Flowers in Chania">
-            <div id="animationContainer">
-            </div>
+    <nav>
+        <div id="menu-placeholder"></div>
+    </nav>
+
+    <div id="main-animation-container" class="animation-container">
+        <div class="animation-return-row">
+            <image id="return-to-main" src="/images/nav_icons/back.png" alt="go-back" class="animation-return-image"></image>
+        </div>
+        <div class="animation-legend">
+            <img src="/images/deleteme/item.png" alt="something" >
+        </div>
+        <div class="animation-canvas">
+            <img src="/images/deleteme/item.png" alt="something" >
+        </div>
+        <div class="animation-options">
+            <img src="/images/deleteme/item.png" alt="something" >
         </div>
     </div>
-    <div id=legend-placeholder></div>
-    <button id="show-legend-button" class="btn btn-light" onclick="hideShowLegend();">Legend</button>
-    <script>
-        $("#legend-placeholder").load("../legend/legend.en.html");
-        $("#menu-placeholder").load("../menu/menu.en.html");
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <div id="main-flexbox-container" class="flexbox-container">
+        <div class="row-flexbox-container row-flexbox-container-1">
+            <div class="flexbox-item flexbox-item-1"></div>
+            <div class="flexbox-item flexbox-item-2"></div>
+            <div class="flexbox-item flexbox-item-3"></div>
+        </div>
+        <div class="row-flexbox-container row-flexbox-container-2">
+            <div class="flexbox-item flexbox-item-4"></div>
+            <div class="flexbox-item flexbox-item-5"></div>
+            <div class="flexbox-item flexbox-item-6"></div>
+        </div>
+    </div>
+    <!-- <div id="legend-placeholder"></div>
+    <button id="show-legend-button" class="btn btn-light sk-only" onclick="hideShowLegend();">Legenda</button>
+    <button id="show-legend-button" class="btn btn-light en-only" onclick="hideShowLegend();">Legend</button> -->
+    <script src="/javascript/application.js" type="module"></script>
 </body>
 
 </html>
