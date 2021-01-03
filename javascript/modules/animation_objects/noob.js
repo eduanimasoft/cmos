@@ -1,10 +1,14 @@
 class NoobAnimation {
     constructor() {
-        this.test = 50;
+        console.log("Hello from NoobAnimation constructor");
     };
 
-    foo() {
-        console.log("hello from noob " + this.test);
+    open() {
+        console.log("NoobAnimation::open says hello");
+    }
+
+    close() {
+        console.log("NoobAnimation::close says hello");
     }
 }
 

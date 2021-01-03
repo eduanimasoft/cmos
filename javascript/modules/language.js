@@ -10,7 +10,7 @@ class LanguageElements {
      * with no lang variable in its localStorage.
      * @returns a language that is set in localStorage
      */
-    initLanguage() {
+    getLanguage() {
         if (localStorage.getItem(this.langCMOS) === null) {
             let lang = navigator.language || navigator.userLanguage;
             console.log(lang)
@@ -87,7 +87,7 @@ class LanguageElements {
      * by choosing it in language selector.
      */
     buildPageWithLangElements() {
-        let lang = this.initLanguage();
+        let lang = this.getLanguage();
         $("#menu-placeholder").load("/menu/menu." + lang + ".html");
         $("#legend-placeholder").load("/legend/legend." + lang + ".html");
         this.switchLanguage(lang);
