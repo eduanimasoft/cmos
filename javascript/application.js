@@ -1,8 +1,3 @@
-/**
- * File: application.js
- * Author: vavercak.pato@gmail.com
- */
-
 // imports
 import {LanguageElements} from './modules/language.js';
 import {getAnimation} from './modules/animation.js';
@@ -28,12 +23,20 @@ function requestLanguageChange(lang) {
     languageElements.langChange(lang);
 }
 
+function addReturnActionIfNeeded() {
+    let mainReturn = document.getElementById('return-to-main');
+
+    if (mainReturn) {
+        mainReturn.addEventListener('click', closeCurrentAnimation, false);
+    }
+}
+
 const mainFrame = () => {
     Array.from(document.getElementsByClassName("flexbox-item")).forEach(function(flexboxItem) {
         flexboxItem.addEventListener("click", initializeAnimation, false);
     });
 
-    document.getElementById('return-to-main').addEventListener('click', closeCurrentAnimation, false);
+    addReturnActionIfNeeded();
 
     languageElements.buildPageWithLangElements();
 

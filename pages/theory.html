@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Theory</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- ### favicon ### -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favis/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favis/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favis/favicon-16x16.png">
+    <link rel="manifest" href="/images/favis/site.webmanifest">
+    <link rel="mask-icon" href="/images/favis/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- ### css ### -->
+    <link rel="stylesheet" href="/styles/main.css" type="text/css">
+    <link rel="stylesheet" href="/styles/anime.css" type="text/css">
+
+    <!-- ### scripts ### -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+</head>
+
+<body>
+    <nav id="menu-placeholder">
+    </nav>
+    <div class="theory-main-container">
+        <div class="theory-row">
+            <div class="theory-item">
+                <h4 class="sk-only">Charakteristika</h4>
+                <h4 class="en-only">Characteristics</h4>
+                <p class="sk-only">
+                    CMOS (angl. Comprementary Metal Oxide Semiconductor) je nízkoenergetická 
+                    polovodičová technológia používaná na vytváranie digitálnych integrovaných obvodov.
+                    Patrí medzi najvýznamnejšie číslicové obvody v súčasnosti.
+                </p>
+                <p class="en-only">
+                    CMOS (Comprementary Metal Oxide Semiconductor) is low-energy
+                    semiconductor technology used for creating digital integrated circuits.
+                    Today, it's one of the most important digital circuits.
+                </p>
+            </div>
+            <div class="theory-item">
+                <h4 class="sk-only">Príklady</h4>
+                <h4 class="en-only">Examples</h4>
+                <p class="sk-only">
+                    Integrované obvody - mikroprocesory CMOS,
+                    statická pamäť RAM a ďalšie digitálne logické obvody.. doplnit
+                    Analógové obvody - prevodníky údajov, obrazové senzory a iné .. 
+                    doplniť a tiež na analógové obvody
+                </p>
+                <p class="en-only">
+                    <!-- TODO:  -->
+
+                    There will be examples <br/>
+                    There will be examples <br/>
+                    There will be examples <br/>
+                </p>
+            </div>
+            <div class="theory-item">
+                <h4 class="sk-only">Princíp</h4>
+                <h4 class="en-only">Principle</h4>
+                <p class="sk-only">
+                    Princíp obvodu je takmer zhodný s NMOS obvodmi, rozdiel je v nahradení
+                    tranzistora TL tranzistormi s kanálom opačného typu vodivosti a pripojením
+                    jeho hradlovej elektoródy na vstupnú svorku.
+                </p>
+                <p class="en-only">
+                    The principle of the circuit is almost identical to NMOS circuits.
+                    The difference is in the replacement of the transistor TL with transistors
+                    with a channel of the opposite type of conductivity and the connection
+                    of its gate electrode to the input terminal.
+                </p>
+            </div>
+        </div>
+        <div class="theory-row">
+            <div class="theory-item">
+                <h4 class="sk-only">Implementácia</h4>
+                <h4 class="en-only">Implementation</h4>
+                <p class="sk-only">
+                    Na implementáciu logických digitálnych obvodov a logických brán
+                    sa teda v obvodoch CMOS používa dvojica tranzistorov zvaných MOSFET:<br/>
+                    n (NMOS)<br/>
+                    p (PMOS)<br/>
+                    Prahové napätia UTN tranzistora NMOS a prahové napätie Utp tranzistora PMOS
+                    sú nastavené na približne rovnakú hodnotu
+                    spĺňajúcu podmienku UTN + | UTP | &lt; UDD , kde UDD je výsledné napätie.
+                </p>
+                <p class="en-only">
+                    For the implementation of logic digital circuits and logic gateways
+                    therefore, a pair of transistors called MOSFETs are used in CMOS circuits:<br/>
+                    n (NMOS)<br/>
+                    p (PMOS)<br/>
+                    Threshold voltages UTN of NMOS transistor and threshold voltage Utp of PMOS transistor
+                    are set to approximately the same value
+                    meeting the condition UTN + | UTP | & lt; UDD, where UDD is the resulting voltage.
+                </p>
+            </div>
+            <div class="theory-item">
+                <h4 class="sk-only">Výhody</h4>
+                <h4 class="en-only">Advantages</h4>
+                <p class="sk-only">
+                    V oboch stavoch L aj H je vždy jeden z dvojice tranzistorov zatvorený a netečie ním prúd, 
+                    prúd tečie iba pri ich vzájomnom prepínaní.
+                    Nakoľko tranzistory sú z pohľadu napájacieho napätia zapojené v sérii, má veľmi malý, 
+                    len zvyškový odber zo zdroja napájania, mierne zvýšený odber je len v prípade,
+                    keď oba tranzistory nie sú úplne zatvorené a v zakázanej oblasti pri prechode z jedného stavu do druhého.
+                    Celkové fungovanie tranzistorov ma zá následok nízku spotrebu.
+                    Vysoká odolnosť proti šumu
+                    Zvyšovaním pracovnej rýchlosti CMOS obvodov sa zvyšuje odber zo zdroja prakticky lineárne.
+                    Obvody CMOS našli spočiatku uplatnenie v systémoch napájaných z batérií a monočlánkov, napríklad v kalkulačkách, 
+                    v digitálnych i ručičkových hodinkách a pod. V súčasnosti sa CMOS presadzuje v obvodoch s veľmi vysokou integráciou, 
+                    prakticky všade z dôvodu snahy o ochranu životného prostredia úsporou energie.
+                </p>
+                <p class="en-only">
+                    In both states L and H, one of the pair of transistors is always closed and no current flows through it, 
+                    the current flows only when they are switched to each other.
+                    As the transistors are connected in series in terms of supply voltage, it has a very small, only residual consumption 
+                    from the power supply, a slightly increased consumption is only if
+                    when both transistors are not completely closed and in the forbidden area during the transition from one state to another.
+                    The overall operation of the transistors results in low power consumption.
+                    High noise resistance
+                    Increasing the working speed of CMOS circuits increases the consumption from the source practically linearly.
+                    CMOS circuits were initially used in systems powered by batteries and monocells, such as calculators, digital 
+                    and hand watches, etc. Currently, CMOS is used in circuits with very high integration, practically everywhere 
+                    due to efforts to protect the environment by saving energy.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="/javascript/application.js" type="module"></script>
+</body>
+</html>
