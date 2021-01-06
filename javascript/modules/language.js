@@ -89,7 +89,7 @@ class LanguageElements {
     buildPageWithLangElements() {
         let lang = this.getLanguage();
         $("#menu-placeholder").load("/menu/menu." + lang + ".html");
-        $("#legend-placeholder").load("/legend/legend." + lang + ".html");
+        // $("#legend-placeholder").load("/legend/legend." + lang + ".html");
         this.switchLanguage(lang);
     }
     

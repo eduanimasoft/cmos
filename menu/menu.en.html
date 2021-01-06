@@ -1,34 +1,19 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
-</script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
-</script>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/index.html">CMOS Technology</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Theory</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Logical Circuits</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Help</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Language
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" onclick="requestLanguageChange('sk');">SK</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" onclick="requestLanguageChange('en');">EN</a>
-                </div>
-            </li>
-        </ul>
-    </div>
-</nav>
+<div class="nav-title">
+    <h4>CMOS Technology</h4>
+</div>
+<ul class="nav-items">
+    <li><a href="#">Theory</a></li>
+    <li><a href="#">Logical Circuits</a></li>
+    <li><a href="#">Help</a></li>
+    <li>
+        <a href="#">
+            <img src="/images/lang_icons/slovak.png" alt="slovak" class="lang-switcher">
+        </a>
+    </li>
+</ul>
+<div class="burger">
+    <div class="layer-1"></div>
+    <div class="layer-2"></div>
+    <div class="layer-3"></div>
+</div>
+<script src="/menu/burger.js" type="text/javascript"></script>
