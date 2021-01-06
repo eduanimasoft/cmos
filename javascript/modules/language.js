@@ -1,4 +1,14 @@
-// const langCMOS = "langCMOS";
+// the Object containing all the titles in EN and SK (code rely on format EN:SK!)
+const titleDictionary = {
+    "Introduction": "Úvod",
+    "Theory": "Teória",
+    "Logical Circuits": "Logické obvody",
+    "Help": "Pomoc"
+}
+
+function getKeyByValue(object, value) {
+    return Object.keys(object).find(key => object[key] === value);
+  }
 
 class LanguageElements {
     constructor(){
@@ -54,11 +64,22 @@ class LanguageElements {
         );
     }
 
+    translateTitleTo(lang) {
+        let documentTitle = `${document.title}`;
+        if ('en' == lang) {
+            document.title = getKeyByValue(titleDictionary, documentTitle);
+        }
+        else {
+            document.title = titleDictionary[documentTitle];
+        }
+    }
+
     /**
      * Iterates over all the page elements and changes 'display' css property to 'block'
      * @param lang specifies whether SK or EN lang elements will be displayed
      */
     displayLanguageElements(lang) {
+        this.translateTitleTo(lang);
         Array.from(document.getElementsByClassName(lang + "-only")).forEach(
             function(element, index, array) {
                 element.style.display = "block";
@@ -89,7 +110,7 @@ class LanguageElements {
     buildPageWithLangElements() {
         let lang = this.getLanguage();
         $("#menu-placeholder").load("/menu/menu." + lang + ".html");
-        $("#legend-placeholder").load("/legend/legend." + lang + ".html");
+        // $("#legend-placeholder").load("/legend/legend." + lang + ".html");
         this.switchLanguage(lang);
     }
     

@@ -24,25 +24,25 @@
 
 @keyframes text-pulse {
     0% {color:#0a0a0a;}
-    100% {color:#e40808;}
+    100% {color:#eeea05;}
 }
 
 @keyframes complementary-pulse {
     0% {fill:#0a0a0a;}
-    100% {fill:#e40808;}
+    100% {fill:#eeea05;}
 }
 
 @keyframes metal-pulse {
-    0%, 100% {fill: #000000;}
-    50% {fill: #eeea05;}
+    0% {fill: #000000;}
+    100% {fill: #eeea05;}
 }
 
 @keyframes oxid-pulse {
-    0%, 100% {fill: #C4C4C4;}
-    50% {fill: #eeea05;}
+    0% {fill: #C4C4C4;}
+    100% {fill: #eeea05;}
 }
 
 @keyframes semiconductor-pulse {
-    0%, 100% {fill: #0862CC;}
-    50% {fill: #eeea05;}
+    0% {fill: #0862CC;}
+    100% {fill: #eeea05;}
 }
