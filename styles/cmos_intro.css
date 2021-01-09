@@ -1,48 +1,90 @@
+:root {
+    --text-color-to: #ffde4a;
+}
+
 .complementary {
-    animation:
-        complementary-pulse 3s ease,
-        text-pulse 3s ease;
+    -o-animation: complementary-pulse 3s ease;
+    -moz-animation: complementary-pulse 3s ease;
+    -webkit-animation: complementary-pulse 3s ease;
+    -ms-animation: complementary-pulse 3s ease;
+    animation: complementary-pulse 3s ease;
 }
 
 .metal {
-    animation:
-        metal-pulse 3s ease 3s,
-        text-pulse 3s ease 3s;
+    -o-animation: metal-pulse 3s ease 3s;
+    -moz-animation: metal-pulse 3s ease 3s;
+    -webkit-animation: metal-pulse 3s ease 3s;
+    -ms-animation: metal-pulse 3s ease 3s;
+    animation: metal-pulse 3s ease 3s;
 }
 
 .oxid {
-    animation:
-        oxid-pulse 3s ease 6s,
-        text-pulse 3s ease 6s;
+    -o-animation: oxid-pulse 3s ease 6s;
+    -moz-animation: oxid-pulse 3s ease 6s;
+    -webkit-animation: oxid-pulse 3s ease 6s;
+    animation: oxid-pulse 3s ease 6s;
 }
 
 .semiconductor {
-    animation: 
-        semiconductor-pulse 3s ease 9s,
-        text-pulse 3s ease 9s;
+    -o-animation: semiconductor-pulse 3s ease 9s;
+    -moz-animation: semiconductor-pulse 3s ease 9s;
+    -webkit-animation: semiconductor-pulse 3s ease 9s;
+    -ms-animation: semiconductor-pulse 3s ease 9s;
+    animation: semiconductor-pulse 3s ease 9s;
+}
+
+h2.complementary {
+    -o-animation: text-pulse 3s ease;
+    -moz-animation: text-pulse 3s ease;
+    -webkit-animation: text-pulse 3s ease;
+    -ms-animation: text-pulse 3s ease;
+    animation: text-pulse 3s ease;
+}
+
+h2.metal {
+    -o-animation: text-pulse 3s ease 3s;
+    -moz-animation: text-pulse 3s ease 3s;
+    -webkit-animation: text-pulse 3s ease 3s;
+    -ms-animation: text-pulse 3s ease 3s;
+    animation: text-pulse 3s ease 3s;
+}
+
+h2.oxid {
+    -o-animation: text-pulse 3s ease 6s;
+    -moz-animation: text-pulse 3s ease 6s;
+    -webkit-animation: text-pulse 3s ease 6s;
+    animation: text-pulse 3s ease 6s;
+}
+
+h2.semiconductor {
+    -o-animation: text-pulse 3s ease 9s;
+    -moz-animation: text-pulse 3s ease 9s;
+    -webkit-animation: text-pulse 3s ease 9s;
+    -ms-animation: text-pulse 3s ease 9s;
+    animation: text-pulse 3s ease 9s;
 }
 
 @keyframes text-pulse {
     0% {color:#0a0a0a;}
-    100% {color:#eeea05;}
+    100% {color:var(--text-color-to);}
 }
 
 @keyframes complementary-pulse {
     0% {fill:#0a0a0a;}
-    100% {fill:#eeea05;}
+    100% {fill:var(--text-color-to);}
 }
 
 @keyframes metal-pulse {
     0% {fill: #000000;}
-    100% {fill: #eeea05;}
+    100% {fill: var(--text-color-to);}
 }
 
 @keyframes oxid-pulse {
     0% {fill: #C4C4C4;}
-    100% {fill: #eeea05;}
+    100% {fill: var(--text-color-to);}
 }
 
 @keyframes semiconductor-pulse {
-    0% {fill: #0862CC;}
-    100% {fill: #eeea05;}
+    0% {fill: #77CAFF;}
+    100% {fill: var(--text-color-to);}
 }
