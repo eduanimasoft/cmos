@@ -38,7 +38,7 @@ class LanguageElements {
      * 
      */
     reloadPageWithLanguage() {
-        this.buildPageWithLangElements();
+        this.translatePage();
     }
 
     /** 
@@ -110,7 +110,7 @@ class LanguageElements {
      * It also sets click event listener, so the language can be changed
      * by choosing it in language selector.
      */
-    buildPageWithLangElements() {
+    translatePage() {
         let lang = this.getLanguage();
         $("#menu-placeholder").load("/menu/menu." + lang + ".html");
         // $("#legend-placeholder").load("/legend/legend." + lang + ".html");

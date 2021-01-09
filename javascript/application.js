@@ -1,21 +1,17 @@
 // imports
 import {LanguageElements} from './modules/language.js';
-import {getAnimation} from './modules/animation.js';
+import {Animation} from './modules/animation.js';
 
-// shared objects in application
+// shared objects
 const languageElements = new LanguageElements();
 let animation = null;
 
 function initializeAnimation() {
-    document.getElementById("main-flexbox-container").style.display="none";
-    document.getElementById("main-animation-container").style.display="grid";
-    animation = getAnimation(this.attributes["name"].value);
+    animation = new Animation(this.attributes["name"].value);
     animation.open();
 }
 
 function closeCurrentAnimation() {
-    document.getElementById("main-flexbox-container").style.display="flex";
-    document.getElementById("main-animation-container").style.display="none";
     animation.close();
 }
 
@@ -38,7 +34,7 @@ const mainFrame = () => {
 
     addReturnActionIfNeeded();
 
-    languageElements.buildPageWithLangElements();
+    languageElements.translatePage();
 
     window.requestLanguageChange = requestLanguageChange;
 }
