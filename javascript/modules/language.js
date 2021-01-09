@@ -65,12 +65,15 @@ class LanguageElements {
     }
 
     translateTitleTo(lang) {
-        let documentTitle = `${document.title}`;
+        let changedTitle = null;
         if ('en' == lang) {
-            document.title = getKeyByValue(titleDictionary, documentTitle);
+            changedTitle = getKeyByValue(titleDictionary, document.title);
         }
         else {
-            document.title = titleDictionary[documentTitle];
+            changedTitle = titleDictionary[document.title];
+        }
+        if(null != changedTitle) {
+            document.title = changedTitle;
         }
     }
 
@@ -117,4 +120,4 @@ class LanguageElements {
 }
 
 // exports
-export { LanguageElements };
+export { LanguageElements, getKeyByValue };
