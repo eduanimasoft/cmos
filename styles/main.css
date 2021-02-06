@@ -227,6 +227,8 @@ nav {
 }
 
 .animation-canvas {
+  width: 100%;
+  height: 90%;
   grid-area: canvas;
   align-self: center;
   justify-self: center;
