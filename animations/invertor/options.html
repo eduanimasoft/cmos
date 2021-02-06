@@ -1,2 +1,35 @@
-<h2 class="en-only">Options</h2>
-<h2 class="sk-only">Možnosti</h2>
+<section>
+    <h2 class="en-only">Options</h2>
+    <h2 class="sk-only">Možnosti</h2>
+    <div class="options-container">
+        <div class="switch-div">
+            <h2>A</h2>
+            <label class="toggle-label" for="toggle-input">
+                <input id="toggle-input" type="checkbox" class="toggle-input">
+                <div class="toggle-area"></div>
+            </label>
+        </div>
+    </div>
+    <script>
+        let inp = document.getElementById("toggle-input");
+        let rect = document.getElementsByClassName("rect-green-on-checked")[0];
+        let lineOn = document.getElementsByClassName("line-green-on-checked")[0];
+        let lineOff = document.getElementsByClassName("line-red-on-checked")[0];
+        console.log(rect);
+        console.log(lineOn);
+        console.log(lineOff);
+        rect.style.fill = "#FF0000";
+        lineOn.style.display="none";
+        inp.addEventListener('change', function() {
+            if(inp.checked) {
+                rect.style.fill = "#00FF00";
+                lineOn.style.display="block";
+                lineOff.style.display="none";
+            } else {
+                rect.style.fill = "#FF0000";
+                lineOn.style.display="none";
+                lineOff.style.display="block";
+            }
+        });
+    </script>
+</section>

@@ -222,7 +222,8 @@ nav {
 
 .animation-legend {
   grid-area: legend;
-  align-self: up;
+  align-items: stretch;
+  justify-items: stretch;
   justify-self: center;
 }
 
@@ -234,7 +235,7 @@ nav {
 
 .animation-options {
   grid-area: options;
-  align-self: bottom;
+  align-self: up;
   justify-self: center;
 }
 

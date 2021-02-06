@@ -1,0 +1,92 @@
+/* Options Styles */
+.options-container {
+    --switch-width: 40px;
+    --options-container-width: 100px;
+    --options-container-height: 100px;
+    --switch-height: calc(var(--switch-width) / 2);
+    --border-radius: calc(var(--switch-height) / 2);
+
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    position: absolute;
+    height: var(--options-container-height);
+    width: var(--options-container-width);
+}
+
+.switch-div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: var(--options-container-width);
+}
+
+.toggle-label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.toggle-input {
+    display: none;
+}
+
+.toggle-area {
+    position: relative;
+    width: var(--switch-width);
+    height: var(--switch-height);
+    border-radius: var(--border-radius);
+    background: #dddddd;
+    transition: background 0.2s;
+}
+
+.toggle-input:checked ~ .toggle-area {
+    background : #005599;
+}
+
+.toggle-area::after {
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    height:var(--switch-height);
+    width:var(--switch-height);
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    border-radius: var(--border-radius);
+    transition:transform 0.2s;
+}
+
+.toggle-input:checked ~ .toggle-area::after {
+    transform: translateX(var(--switch-height));
+}
+
+/* Legend Styles */
+.legend-elements-container {
+    --distance-between: 1vw;
+    --legend-img-dim: 30px;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+.legend-element {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    width: fit-content;
+}
+
+.legend-image {
+    width: var(--legend-img-dim);
+    height: var(--legend-img-dim);
+    margin-right: var(--distance-between);
+}
+
+.legend-text {
+    font-size: 20px;
+    margin-left: var(--distance-between);
+}
