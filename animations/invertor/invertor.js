@@ -67,7 +67,7 @@ function toggleA() {
     }
 }
 
-function showDetailedInfo() {
+function showDetailedInvertorInfo() {
     let detailed = document.getElementsByClassName('invertor-detailed-desc');
     for(let detail = 0; detail < detailed.length; ++detail) {
         detailed[detail].classList.toggle('invertor-detailed-desc-active');
