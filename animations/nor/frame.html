@@ -1,13 +1,33 @@
 <link rel="stylesheet" href="/animations/nor/nor.css" type="text/css">
-<svg width="100%" height="1007" viewBox="0 0 725 590" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="100%" height="100%" viewBox="0 0 725 590" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect width="725" height="590" fill="white"/>
+    <!-- ### Truth Table -->
     <rect x="576" y="175" width="148" height="48" fill="#C4C4C4" stroke="black" stroke-width="2"/>
-    <rect x="576" y="223" width="148" height="48" fill="white" stroke="black" stroke-width="2"/>
-    <rect x="576" y="271" width="148" height="48" fill="#C4C4C4" stroke="black" stroke-width="2"/>
-    <rect x="576" y="319" width="148" height="48" fill="#C4C4C4" stroke="black" stroke-width="2"/>
-    <rect x="576" y="367" width="148" height="48" fill="#C4C4C4" stroke="black" stroke-width="2"/>
+    <rect class="white-state-0 truth-table-rect" x="576" y="223" width="148" height="48" fill="white" stroke="black" stroke-width="2"/>
+    <rect class="white-state-1 truth-table-rect" x="576" y="271" width="148" height="48" fill="#C4C4C4" stroke="black" stroke-width="2"/>
+    <rect class="white-state-2 truth-table-rect" x="576" y="319" width="148" height="48" fill="#C4C4C4" stroke="black" stroke-width="2"/>
+    <rect class="white-state-3 truth-table-rect" x="576" y="367" width="148" height="48" fill="#C4C4C4" stroke="black" stroke-width="2"/>
     <line x1="677" y1="174.996" x2="677" y2="416.004" stroke="black" stroke-width="2"/>
-    <path d="M575 247L545 268.651V225.349L575 247Z" fill="#FF0000"/>
+    <path class="active-row" d="M575 247L545 268.651V225.349L575 247Z" fill="#FF0000"/>
+    <!-- ### B Column -->
+    <text x="590" y="210" fill="#000000" class="truth-table-text-svg">B</text>
+    <text x="590" y="255" fill="#000000" class="truth-table-text-svg">0</text>
+    <text x="590" y="300" fill="#000000" class="truth-table-text-svg">0</text>
+    <text x="590" y="348" fill="#000000" class="truth-table-text-svg">1</text>
+    <text x="590" y="395" fill="#000000" class="truth-table-text-svg">1</text>
+    <!-- ### A Column -->
+    <text x="640" y="210" fill="#000000" class="truth-table-text-svg">A</text>
+    <text x="640" y="255" fill="#000000" class="truth-table-text-svg">0</text>
+    <text x="640" y="300" fill="#000000" class="truth-table-text-svg">1</text>
+    <text x="640" y="348" fill="#000000" class="truth-table-text-svg">0</text>
+    <text x="640" y="395" fill="#000000" class="truth-table-text-svg">1</text>
+    <!-- ### Y Column -->
+    <text x="690" y="210" fill="#000000" class="truth-table-text-svg">Y</text>
+    <text x="690" y="255" fill="#000000" class="truth-table-text-svg">1</text>
+    <text x="690" y="300" fill="#000000" class="truth-table-text-svg">0</text>
+    <text x="690" y="348" fill="#000000" class="truth-table-text-svg">0</text>
+    <text x="690" y="395" fill="#000000" class="truth-table-text-svg">0</text>
+    <!-- ### Equivalent Circuit -->
     <line x1="410.5" y1="365" x2="410.5" y2="339" stroke="#00CC00" stroke-width="3"/>
     <line x1="402.5" y1="522" x2="402.5" y2="445" stroke="#00CC00" stroke-width="3"/>
     <line x1="394" y1="576.5" x2="411" y2="576.5" stroke="#FF0000" stroke-width="3"/>

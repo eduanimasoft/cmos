@@ -256,3 +256,68 @@ nav {
 .theory-item:hover {
   border-radius: 10px;
 }
+
+/* SVG related styles 
+This section includes styles for
+ - Cmos Intro animation
+ - Invertor animation
+ - Nor animation
+ - Nand animation
+ - Cmos Principle animation
+*/
+
+.intro-title-text-svg {
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.title-text-svg {
+    font-size: larger;
+}
+
+.truth-table-text-svg {
+  font-size: x-large;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.bold-text-svg {
+  font-weight: bold;
+}
+
+.normal-text-svg {
+    font-size: normal;
+}
+
+.bigger-text-svg {
+    font-size: large;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.subindex-text-svg {
+    font-size: small;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.subsubindex-text-svg {
+    font-size: x-small;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Invertor animation */
+.invertor-detailed-desc {
+  display: none;
+}
+
+.invertor-detailed-desc-active {
+  display: block;
+}
+
+/* Nor animation */
+
+/* Nand animation */
+
+/* Cmos Principle animation */

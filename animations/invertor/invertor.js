@@ -9,7 +9,7 @@ function turnAon() {
     let black = '#000000';
     let white = '#FFFFFF';
     let rowCursor = SVG('.active-row');
-    rowCursor.animate(400).move(593, 323);
+    rowCursor.animate().move(593, 323);
     rowCursor.fill(greenFill);
     SVG.find('.line-green-a-on').stroke(greenStroke);
     SVG.find('.line-red-a-on').stroke(redStroke);
