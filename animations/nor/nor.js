@@ -15,18 +15,35 @@ function toggleCircuit() {
 
 function changeTruthTable(a, b) {
     SVG.find('.truth-table-rect').fill('#C4C4C4');
+    changeInputTextValues(a, b);
     if (a == 1 && b == 1) {
         truthTableState3();
+        changeOutputTextValues(0);
     }
     else if (a == 1 && b == 0) {
         truthTableState1();
+        changeOutputTextValues(0);
     }
     else if (a == 0 && b == 1) {
         truthTableState2();
+        changeOutputTextValues(0);
     }
     else {
         truthTableState0();
+        changeOutputTextValues(1);
     }
+}
+
+function changeInputTextValues(a, b) {
+    let atext = `A = ${a}`
+    let btext = `B = ${b}`
+    SVG.find('.a-input-text').plain(atext);
+    SVG.find('.b-input-text').plain(btext);
+}
+
+function changeOutputTextValues(output) {
+    let outputText = `Y = ${output}`
+    SVG.find('.y-state').plain(outputText);
 }
 
 /**
