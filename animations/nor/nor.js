@@ -189,31 +189,47 @@ function disconnectLines(stateNumber) {
  * @param {any} stateNumber - defines a state in which the animation is
  */
 function changeCircuitColors(stateNumber) {
-    let blackLine = '#000000';
-    let greenLine = '#00CC00';
-    let redLine = '#FF0000';
-    let orangeLine = '#FFBB00'
-    let greenCircle = '#008800';
-    let redCircle = '#CC0000';
-    // Lines
-    SVG.find(`.line-black-state-${stateNumber}`).stroke(blackLine);
-    SVG.find(`.line-green-state-${stateNumber}`).stroke(greenLine);
-    SVG.find(`.line-red-state-${stateNumber}`).stroke(redLine);
-    SVG.find(`.line-orange-state-${stateNumber}`).stroke(orangeLine);
-    // Circles
-    SVG.find(`.circle-green-state-${stateNumber}`).fill(greenCircle).stroke(greenCircle);
-    SVG.find(`.circle-red-state-${stateNumber}`).fill(redCircle).stroke(redCircle);
-    // Empty circles
-    SVG.find(`.empty-circle-green-state-${stateNumber}`).stroke(greenCircle);
-    SVG.find(`.empty-circle-red-state-${stateNumber}`).stroke(redCircle);
+    let elementColorToNumber = {
+        line : {
+            "black" : "#000000",
+            "green" : "#00CC00",
+            "red" : "#FF0000",
+            "orange" : "#FFBB00"
+        },
+        circle : {
+            "black" : "#000000",
+            "green" : "#008800",
+            "red" : "#CC0000",
+            "orange" : "#FFBB00"
+        }
+    };
+    let possibleColors = ['green', 'red', 'black', 'orange'];
+    possibleColors.forEach((color) => {
+        let affectedItems = SVG.find(`.${color}-state-${stateNumber}`);
+        affectedItems.forEach((item) => {
+            if (item instanceof SVG.Line) {
+                item.stroke(elementColorToNumber.line[color]);
+            }
+            else if (item instanceof SVG.Circle) {
+                // this is the case of empty circle
+                if ("white" != item.attr('fill')) {
+                    item.fill(elementColorToNumber.circle[color]);
+                }
+                item.stroke(elementColorToNumber.circle[color]);
+            }
+        });
+    });
 }
 
 
 /**
- * @todo
+ * Search for symbols marked as advanced and show/hide them
  */
 function showDetailedNorInfo() {
-    return;
+    let detailed = document.getElementsByClassName('detailed-symbol');
+    for(let detail = 0; detail < detailed.length; ++detail) {
+        detailed[detail].classList.toggle('detailed-symbol-active');
+    }
 }
 
 

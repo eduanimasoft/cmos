@@ -68,8 +68,8 @@ function toggleA() {
 }
 
 function showDetailedInvertorInfo() {
-    let detailed = document.getElementsByClassName('invertor-detailed-desc');
+    let detailed = document.getElementsByClassName('detailed-symbol');
     for(let detail = 0; detail < detailed.length; ++detail) {
-        detailed[detail].classList.toggle('invertor-detailed-desc-active');
+        detailed[detail].classList.toggle('detailed-symbol-active');
     }
 }

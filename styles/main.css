@@ -307,12 +307,11 @@ This section includes styles for
     font-style: italic;
 }
 
-/* Invertor animation */
-.invertor-detailed-desc {
+.detailed-symbol {
   display: none;
 }
 
-.invertor-detailed-desc-active {
+.detailed-symbol-active {
   display: block;
 }
 
