@@ -2,7 +2,7 @@
 import {LanguageElements} from './modules/language.js';
 import {Animation} from './modules/animation.js';
 
-// shared objects
+// global objects
 const languageElements = new LanguageElements();
 let animation = null;
 
