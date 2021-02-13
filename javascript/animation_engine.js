@@ -228,7 +228,7 @@ function changeCircuitColors(stateNumber) {
 /**
  * Search for symbols marked as advanced and show/hide them
  */
-function showDetailedNorInfo() {
+function showDetailedSymbols() {
     let detailed = document.getElementsByClassName('detailed-symbol');
     for(let detail = 0; detail < detailed.length; ++detail) {
         detailed[detail].classList.toggle('detailed-symbol-active');
@@ -263,6 +263,8 @@ function toggleInvertorCircuit() {
     circuit = "invertor";
     let a = getStateA();
     let stateResult = !(a) ? 1 : 0;
+    /* 0 as a second parameter ensures
+    the Invertor Circuit will be in states {0, 1} */
     toggleCircuit(a, 0, stateResult);
 }
 
