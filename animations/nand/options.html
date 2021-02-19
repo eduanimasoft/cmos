@@ -1,2 +1,17 @@
 <h2 class="en-only">Options</h2>
 <h2 class="sk-only">Možnosti</h2>
+<div class="nor-options">
+    <label for="value-for-a">A = </label>
+    <select id="value-for-a" class="invertor-a-value" value="A" onChange="toggleNandCircuit()">
+        <option value="0" selected>0</option>
+        <option value="1">1</option>
+    </select>
+    <label for="value-for-b">B = </label>
+    <select id="value-for-b" class="invertor-b-value" value="B" onChange="toggleNandCircuit()">
+        <option value="0" selected>0</option>
+        <option value="1">1</option>
+    </select>
+</div>
+
+<button class="sk-only" onClick="showDetailedSymbols();">Viac</button>
+<button class="en-only" onClick="showDetailedSymbols();">More</button>
