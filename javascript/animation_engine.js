@@ -46,6 +46,20 @@ function getStateNumber(a, b) {
 }
 
 
+function getBeginAndEnd(stateNumber) {
+    let begin_end = [0.0, 1.0] // start with forward direction, e.g 0 -> 1
+    if (1 == stateNumber) { // in case we have to animate backwards
+        [ begin_end[0], begin_end[1] ] = [ begin_end[1], begin_end[0] ];
+    }
+    return begin_end;
+}
+
+
+function getPrincipleStateNumber() {
+    return document.getElementById('voltage-select').value;
+}
+
+
 /**
  * Search for input/output values in animation's text and change them to provided values
  * @param {any} a - value for A
@@ -96,7 +110,7 @@ function changeTruthTable(stateNumber) {
  */
 function moveActiveRowCursor(ycoord, stateNumber) {
     SVG.find('.truth-table-rect').fill('#C4C4C4');
-    SVG('.active-row').animate().y(ycoord);
+    SVG('.active-row').animate(200).y(ycoord);
     SVG(`.rect-white-state-${stateNumber}`).fill('#FFFFFF');
 }
 
@@ -266,6 +280,31 @@ function toggleInvertorCircuit() {
     /* 0 as a second parameter ensures
     the Invertor Circuit will be in states {0, 1} */
     toggleCircuit(a, 0, stateResult);
+}
+
+function changeLogarithmTextValues(stateNumber) {
+    ['log0', 'log1'].forEach( (val) => {
+        SVG.find(`.${val}-state-${stateNumber}`).plain(`${val}`);
+    });
+}
+
+
+function changeVoltageTextValues(stateNumber) {
+    [0, 1, 5].forEach( (val) => {
+        SVG.find(`.volt${val}-state-${stateNumber}`).plain(`${val}V`);
+    });
+}
+
+function togglePrincipleAnimation() {
+    circuit = "principle";
+    let stateNumber = getPrincipleStateNumber();
+    let begin_end = getBeginAndEnd(stateNumber);
+    changePrincipleColors(stateNumber);
+    principleCursorAnimation(begin_end);
+    principleGraphAnimation(begin_end);
+    principleParticlesAnimation(begin_end, stateNumber);
+    changeVoltageTextValues(stateNumber);
+    changeLogarithmTextValues(stateNumber);
 }
 
 
