@@ -1,52 +1,66 @@
 <!DOCTYPE HTML>
 <html lang="en">
-
 <head>
     <title>Introduction</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- ### favicon ### -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favis/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favis/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favis/favicon-16x16.png">
-    <link rel="manifest" href="/images/favis/site.webmanifest">
-    <link rel="mask-icon" href="/images/favis/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favis/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favis/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favis/favicon-16x16.png">
+    <link rel="manifest" href="./images/favis/site.webmanifest">
+    <link rel="mask-icon" href="./images/favis/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-
-    <!-- ### css ### -->
-    <link rel="stylesheet" href="/styles/main.css" type="text/css">
-
-    <!-- ### scripts ### -->
+    <link rel="stylesheet" href="./styles/main.css" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js">
     </script>
-        <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/MotionPathPlugin.min.js">
     </script>
 </head>
-
-<body>
-    <nav id="menu-placeholder">
+<body onload="translatePage()">
+    <nav>
+        <div class="nav-title">
+            <h4 class="en-only"><a href="./index.html">CMOS Technology</a></h4>
+            <h4 class="sk-only"><a href="./index.html">Technológia CMOS</a></h4>
+        </div>
+        <ul class="nav-items">
+            <li class="en-only"><a href="./subpages/theory.html">Theory</a></li>
+            <li class="sk-only"><a href="./subpages/theory.html">Teória</a></li>
+            <li class="en-only"><a href="./subpages/circuits.html">Logical Circuits</a></li>
+            <li class="sk-only"><a href="./subpages/circuits.html">Logické obvody</a></li>
+            <li class="en-only"><a href="./subpages/help.html">Help</a></li>
+            <li class="sk-only"><a href="./subpages/help.html">Pomoc</a></li>
+            <li class="en-only" onclick="requestLanguageChange('sk')">
+                <a href="#">
+                    <img src="./images/lang_icons/slovak.png" alt="slovak" class="lang-switcher">
+                </a>
+            </li>
+            <li class="sk-only" onclick="requestLanguageChange('en')">
+                <a href="#">
+                    <img src="./images/lang_icons/british.png" alt="english" class="lang-switcher">
+                </a>
+            </li>
+        </ul>
+        <div class="burger">
+            <div class="layer-1"></div>
+            <div class="layer-2"></div>
+            <div class="layer-3"></div>
+        </div>
+        <script src="./javascript/burger.js" type="text/javascript"></script>
     </nav>
-
     <div id="main-animation-container" class="animation-container">
         <div class="animation-return-row" onclick="closeCurrentAnimation()">
-            <image id="return-to-main" src="/images/nav_icons/back.png" alt="go-back" class="animation-return-image">
+            <image id="return-to-main" src="./images/nav_icons/back.png" alt="go-back" class="animation-return-image">
             </image>
         </div>
-        <!-- Legend placeholder -->
         <div class="animation-legend"></div>
-        <!-- Main SVG placeholder -->
-        <div class="animation-canvas"></div>
-        <!-- Options placeholder -->
+        <div class="animation-frame"></div>
         <div class="animation-options"></div>
     </div>
-
     <div id="main-flexbox-container" class="flexbox-container">
         <div class="flexbox-item flexbox-item-1" onclick="initializeAnimation('cmos_intro')"></div>
         <div class="flexbox-item flexbox-item-2" onclick="initializeAnimation('nor')"></div>
@@ -55,10 +69,8 @@
         <div class="flexbox-item flexbox-item-5" onclick="initializeAnimation('cmos_principle')"></div>
         <div class="flexbox-item flexbox-item-6" onclick="initializeAnimation('combined')"></div>
     </div>
-    <script src="/javascript/modules/language.js" type="text/javascript"></script>
-    <script src="/javascript/modules/animation.js" type="text/javascript"></script>
-    <script src="/javascript/application.js" type="text/javascript"></script>
-    <script src="/javascript/animation_engine.js" type="text/javascript"></script>
-    <script src="/javascript/path_motions.js" type="text/javascript"></script>
+    <script src="./javascript/language.js" type="text/javascript"></script>
+    <script src="./javascript/animation_engine.js" type="text/javascript"></script>
+    <script src="./javascript/path_motions.js" type="text/javascript"></script>
 </body>
 </html>

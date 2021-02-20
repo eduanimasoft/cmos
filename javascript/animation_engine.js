@@ -322,3 +322,26 @@ function toggleCircuit(a, b, stateResult) {
     connectLines(stateNumber);
     disconnectLines(stateNumber);
 }
+
+
+function initializeAnimation(animationName) {
+    ['legend', 'options', 'frame'].forEach( (page) => {
+        $(`.animation-${page}`).load(`./animations/${animationName}/${page}.html`, translatePage);
+    });
+    document.getElementById("main-flexbox-container").style.display="none";
+    document.getElementById("main-animation-container").style.display="grid";
+}
+
+
+function closeCurrentAnimation() {
+    ['legend', 'options', 'frame'].forEach( (page) => {
+        $(`.animation-${page}`).empty();
+    });
+    document.getElementById("main-flexbox-container").style.display="flex";
+    document.getElementById("main-animation-container").style.display="none";
+}
+
+
+function requestLanguageChange(lang) {
+    langChange(lang);
+}

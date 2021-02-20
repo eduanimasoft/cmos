@@ -173,8 +173,8 @@ nav {
   grid-template-columns: 1fr 4fr 2fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas:
-    "return canvas options"
-    ". canvas legend";
+    "return frame options"
+    ". frame legend";
 }
 
 .animation-return-image {
@@ -199,10 +199,10 @@ nav {
   align-items: center;
 }
 
-.animation-canvas {
+.animation-frame {
   width: 100%;
   height: 90%;
-  grid-area: canvas;
+  grid-area: frame;
   align-self: center;
   justify-self: center;
 }
