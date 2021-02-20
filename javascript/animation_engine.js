@@ -282,6 +282,7 @@ function toggleInvertorCircuit() {
     toggleCircuit(a, 0, stateResult);
 }
 
+
 function changeLogarithmTextValues(stateNumber) {
     ['log0', 'log1'].forEach( (val) => {
         SVG.find(`.${val}-state-${stateNumber}`).plain(`${val}`);
@@ -294,6 +295,7 @@ function changeVoltageTextValues(stateNumber) {
         SVG.find(`.volt${val}-state-${stateNumber}`).plain(`${val}V`);
     });
 }
+
 
 function togglePrincipleAnimation() {
     circuit = "principle";
