@@ -2,8 +2,13 @@
 <h2 class="sk-only">Možnosti</h2>
 <div class="principle-options">
     <label for="value-for-a">A = </label>
-    <select id="voltage-select" class="voltage-value" value="A" onChange="togglePrincipleAnimation();">
+    <select id="voltage-select" class="voltage-value" value="A" onChange="togglePrincipleAnimation()">
         <option value="0" selected>5V log1</option>
         <option value="1">0V log0</option>
     </select>
 </div>
+
+<button class="en-only" onclick="initializeAnimation('invertor')">Prev</button>
+<button class="sk-only" onclick="initializeAnimation('invertor')">Späť</button>
+<button class="en-only" onclick="initializeAnimation('combined')">Next</button>
+<button class="sk-only" onclick="initializeAnimation('combined')">Ďalej</button>
