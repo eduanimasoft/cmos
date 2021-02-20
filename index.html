@@ -35,7 +35,7 @@
     </nav>
 
     <div id="main-animation-container" class="animation-container">
-        <div class="animation-return-row">
+        <div class="animation-return-row" onclick="closeCurrentAnimation()">
             <image id="return-to-main" src="/images/nav_icons/back.png" alt="go-back" class="animation-return-image">
             </image>
         </div>
@@ -48,14 +48,16 @@
     </div>
 
     <div id="main-flexbox-container" class="flexbox-container">
-        <div class="flexbox-item flexbox-item-1" name="cmos_intro"></div>
-        <div class="flexbox-item flexbox-item-2" name="nor"></div>
-        <div class="flexbox-item flexbox-item-3" name="nand"></div>
-        <div class="flexbox-item flexbox-item-4" name="invertor"></div>
-        <div class="flexbox-item flexbox-item-5" name="combined"></div>
-        <div class="flexbox-item flexbox-item-6" name="cmos_principle"></div>
+        <div class="flexbox-item flexbox-item-1" onclick="initializeAnimation('cmos_intro')"></div>
+        <div class="flexbox-item flexbox-item-2" onclick="initializeAnimation('nor')"></div>
+        <div class="flexbox-item flexbox-item-3" onclick="initializeAnimation('nand')"></div>
+        <div class="flexbox-item flexbox-item-4" onclick="initializeAnimation('invertor')"></div>
+        <div class="flexbox-item flexbox-item-5" onclick="initializeAnimation('cmos_principle')"></div>
+        <div class="flexbox-item flexbox-item-6" onclick="initializeAnimation('combined')"></div>
     </div>
-    <script src="/javascript/application.js" type="module"></script>
+    <script src="/javascript/modules/language.js" type="text/javascript"></script>
+    <script src="/javascript/modules/animation.js" type="text/javascript"></script>
+    <script src="/javascript/application.js" type="text/javascript"></script>
     <script src="/javascript/animation_engine.js" type="text/javascript"></script>
     <script src="/javascript/path_motions.js" type="text/javascript"></script>
 </body>

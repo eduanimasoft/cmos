@@ -1,10 +1,8 @@
-import {LanguageElements} from './language.js';
-
 function getAnimationDirectory(animationName) {
     return "/animations/" + animationName;
 }
 
-class Animation {
+class CmosAnimation {
     constructor(animationName) {
         this.animationDirectory = getAnimationDirectory(animationName);
     }
@@ -30,5 +28,3 @@ class Animation {
         document.getElementById("main-animation-container").style.display="none";
     }
 }
-
-export {Animation};

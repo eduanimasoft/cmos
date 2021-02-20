@@ -118,6 +118,3 @@ class LanguageElements {
     }
     
 }
-
-// exports
-export { LanguageElements, getKeyByValue };
