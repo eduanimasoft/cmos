@@ -14,10 +14,6 @@ body {
   height: var(--main-height);
   font-family: sans-serif;
   background-color: white;
-  /* background-image: url("../images/background.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center; */
 }
 
 nav {
@@ -135,7 +131,6 @@ nav {
   flex-wrap: wrap;
   align-items: space-around;
   justify-content: space-around;
-  /* background-color: white; */
   z-index: 0;
   padding: var(--nav-height);
 }
@@ -164,31 +159,6 @@ nav {
   background-color: aliceblue;
   transform: translateY(-10%);
 }
-
-
-/* .flexbox-item-1 {
-  background-color: red;
-}
-
-.flexbox-item-2 {
-  background-color: purple;
-}
-
-.flexbox-item-3 {
-  background-color: black;
-}
-
-.flexbox-item-4 {
-  background-color: blue;
-}
-
-.flexbox-item-5 {
-  background-color: green;
-}
-
-.flexbox-item-6 {
-  background-color: yellow;
-} */
 
 .animation-container {
   display: none;
@@ -343,9 +313,3 @@ This section includes styles for
 .detailed-symbol-active {
   display: block;
 }
-
-/* Nor animation */
-
-/* Nand animation */
-
-/* Cmos Principle animation */
