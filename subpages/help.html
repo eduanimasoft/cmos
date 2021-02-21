@@ -7,24 +7,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- ### favicon ### -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favis/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favis/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favis/favicon-16x16.png">
-    <link rel="manifest" href="/images/favis/site.webmanifest">
-    <link rel="mask-icon" href="/images/favis/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favis/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favis/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favis/favicon-16x16.png">
+    <link rel="manifest" href="../images/favis/site.webmanifest">
+    <link rel="mask-icon" href="../images/favis/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
     <!-- ### css ### -->
-    <link rel="stylesheet" href="/styles/main.css" type="text/css">
+    <link rel="stylesheet" href="../styles/main.css" type="text/css">
 
     <!-- ### scripts ### -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
     </script>
 </head>
 
-<body>
-    <nav id="menu-placeholder"></nav>
+<body onload="translatePage()">
+    <nav>
+        <div class="nav-title">
+            <h4 class="en-only"><a href="../index.html">CMOS Technology</a></h4>
+            <h4 class="sk-only"><a href="../index.html">Technológia CMOS</a></h4>
+        </div>
+        <ul class="nav-items">
+            <li class="en-only"><a href="./theory.html">Theory</a></li>
+            <li class="sk-only"><a href="./theory.html">Teória</a></li>
+            <li class="en-only"><a href="./circuits.html">Logical Circuits</a></li>
+            <li class="sk-only"><a href="./circuits.html">Logické obvody</a></li>
+            <li class="en-only"><a href="./help.html">Help</a></li>
+            <li class="sk-only"><a href="./help.html">Pomoc</a></li>
+            <li class="en-only" onclick="langChange('sk')">
+                <a href="#">
+                    <img src="../images/lang_icons/british.png" alt="slovak" class="lang-switcher">
+                </a>
+            </li>
+            <li class="sk-only" onclick="langChange('en')">
+                <a href="#">
+                    <img src="../images/lang_icons/slovak.png" alt="english" class="lang-switcher">
+                </a>
+            </li>
+        </ul>
+        <div class="burger">
+            <div class="layer-1"></div>
+            <div class="layer-2"></div>
+            <div class="layer-3"></div>
+        </div>
+        <script src="../javascript/burger.js" type="text/javascript"></script>
+    </nav>
     <div class="theory-main-container">
         <div class="theory-row">
             <div class="theory-item">
@@ -115,6 +144,6 @@
             </div>
         </div>
     </div>
-    <script src="/javascript/application.js" type="module"></script>
+    <script src="../javascript/language.js" type="text/javascript"></script>
 </body>
 </html>

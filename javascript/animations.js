@@ -340,8 +340,3 @@ function closeCurrentAnimation() {
     document.getElementById("main-flexbox-container").style.display="flex";
     document.getElementById("main-animation-container").style.display="none";
 }
-
-
-function requestLanguageChange(lang) {
-    langChange(lang);
-}

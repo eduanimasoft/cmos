@@ -133,6 +133,11 @@ nav {
   justify-content: space-around;
   z-index: 0;
   padding: var(--nav-height);
+  /* background: url(../images/background.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; */
 }
 
 .flexbox-item {
