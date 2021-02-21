@@ -13,6 +13,11 @@ body {
   --nav-height: 8vh;
   height: var(--main-height);
   font-family: sans-serif;
+  background-color: white;
+  /* background-image: url("../images/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; */
 }
 
 nav {
@@ -130,20 +135,38 @@ nav {
   flex-wrap: wrap;
   align-items: space-around;
   justify-content: space-around;
-  background-color: white;
+  /* background-color: white; */
   z-index: 0;
   padding: var(--nav-height);
 }
 
 .flexbox-item {
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: 25vw;
   height: 25vh;
-  margin: 10px;
+  margin: 0.5vw;
   cursor: pointer;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-around;
+  align-content: space-around;
 }
 
-.flexbox-item-1 {
+.flexbox-item img {
+  width: 50%;
+  height: 50%;
+}
+
+.flexbox-item:hover {
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: aliceblue;
+  transform: translateY(-10%);
+}
+
+
+/* .flexbox-item-1 {
   background-color: red;
 }
 
@@ -165,7 +188,7 @@ nav {
 
 .flexbox-item-6 {
   background-color: yellow;
-}
+} */
 
 .animation-container {
   display: none;

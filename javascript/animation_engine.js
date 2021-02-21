@@ -291,7 +291,7 @@ function changeLogarithmTextValues(stateNumber) {
 
 
 function changeVoltageTextValues(stateNumber) {
-    [0, 1, 5].forEach( (val) => {
+    [0, 5].forEach( (val) => {
         SVG.find(`.volt${val}-state-${stateNumber}`).plain(`${val}V`);
     });
 }
