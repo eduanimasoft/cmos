@@ -9,11 +9,19 @@ html {
 }
 
 body {
-  --main-height: 90vh;
+  --main-height: 92vh;
   --nav-height: 8vh;
   height: var(--main-height);
   font-family: sans-serif;
   background-color: white;
+}
+
+body.lang-en .sk-only{
+  display: none;
+}
+
+body.lang-sk .en-only{
+  display: none;
 }
 
 nav {
@@ -141,6 +149,7 @@ nav {
 }
 
 .flexbox-item {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 25vw;
@@ -149,13 +158,16 @@ nav {
   cursor: pointer;
   align-items: center;
   justify-items: center;
-  justify-content: space-around;
-  align-content: space-around;
 }
 
 .flexbox-item img {
-  width: 50%;
-  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: auto;
+  max-width: 150px;
+  transform: translate(-50%, -50%);
 }
 
 .flexbox-item:hover {

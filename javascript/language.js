@@ -32,14 +32,6 @@ function getLanguage() {
 }
 
 
-/**
- * 
- */
-function reloadPageWithLanguage() {
-    translatePage();
-}
-
-
 /** 
  * The following function switches lang value in browser's local storage. \
  * The lang variable defines whether to use SK or EN version of the page. \
@@ -47,21 +39,10 @@ function reloadPageWithLanguage() {
  */
 function langChange(lang) {
     localStorage.setItem(langCMOS, lang);
-    reloadPageWithLanguage();
-}
-
-
-/**
- * Iterates over all the page elements of class [sk|en]-only 
- * and changes 'display' css property to 'none'.
- * @param lang specifies whether SK or EN lang elements will be hided
- */
-function hideLanguageElements(lang) {
-    Array.from(document.getElementsByClassName(lang + "-only")).forEach(
-        function(element, index, array) {
-            element.style.display = "none";
-        }
-    );
+    let body = document.getElementsByTagName('body')[0];
+    body.classList = "";
+    body.classList.add(`lang-${lang}`);
+    translateTitleTo(lang);
 }
 
 
@@ -80,35 +61,6 @@ function translateTitleTo(lang) {
 
 
 /**
- * Iterates over all the page elements and changes 'display' css property to 'block'
- * @param lang specifies whether SK or EN lang elements will be displayed
- */
-function displayLanguageElements(lang) {
-    translateTitleTo(lang);
-    Array.from(document.getElementsByClassName(lang + "-only")).forEach(
-        function(element, index, array) {
-            element.style.display = "block";
-        }
-    );
-}
-
-
-/**
- * This method hides elements in a different language as the specified one
- * and displays elements in that language.
- * @param lang specifies which language will be the page changed to
- */
-function switchLanguage(lang) {
-    if ('en' === lang) {
-        hideLanguageElements("sk");
-    } else {
-        hideLanguageElements("en");
-    }
-    displayLanguageElements(lang);
-}
-
-
-/**
  * This function is the most important since it determines language
  * and builds page elements according to a detected language.
  * It also sets click event listener, so the language can be changed
@@ -116,5 +68,5 @@ function switchLanguage(lang) {
  */
 function translatePage() {
     let lang = getLanguage();
-    switchLanguage(lang);
+    langChange(lang);
 }
