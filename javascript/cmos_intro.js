@@ -1,7 +1,7 @@
 
-function animate() {
+function animateIntro() {
     let stressColor = '#FFF500';
-    let animationDuration = 1000;
+    let animationDuration = 3000;
 
     SVG.find('.complementary-pmos')
         .animate(animationDuration).fill(stressColor)
@@ -41,4 +41,3 @@ function animate() {
         .animate(animationDuration).fill('#111010').opacity(0);
 }
 
-animate();
