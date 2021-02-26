@@ -1,6 +1,6 @@
-<h2 class="en-only">Options</h2>
-<h2 class="sk-only">Možnosti</h2>
 <div class="nor-options">
+    <h2 class="en-only">Options</h2>
+    <h2 class="sk-only">Možnosti</h2>
     <label for="value-for-a">A = </label>
     <select id="value-for-a" class="invertor-a-value" value="A" onChange="toggleNorCircuit()">
         <option value="0" selected>0</option>
@@ -12,11 +12,73 @@
         <option value="1">1</option>
     </select>
 </div>
-
 <button class="sk-only" onClick="showDetailedSymbols();">Viac</button>
 <button class="en-only" onClick="showDetailedSymbols();">More</button>
-
 <button class="en-only" onclick="initializeAnimation('cmos_intro')">Prev</button>
 <button class="sk-only" onclick="initializeAnimation('cmos_intro')">Späť</button>
 <button class="en-only" onclick="initializeAnimation('nand')">Next</button>
 <button class="sk-only" onclick="initializeAnimation('nand')">Ďalej</button>
+<section class="legend">
+    <table class="legend-table">
+        <caption class="en-only">Legend</caption>
+        <caption class="sk-only">Legenda</caption>
+        <tr>
+            <td><img src="./images/legend_icons/green.png" class="legend-image"/></td>
+            <td class="legend-separator"></td>
+            <td class="en-only legend-desc-text">Applied voltage</td>
+            <td class="sk-only legend-desc-text">Pod napätím</td>
+        </tr>
+        <tr>
+            <td><img src="./images/legend_icons/red.png" class="legend-image"/></td>
+            <td class="legend-separator"></td>
+            <td class="en-only legend-desc-text">Ground</td>
+            <td class="sk-only legend-desc-text">Uzemnenie</td>
+        </tr>
+        <tr>
+            <td><img src="./images/legend_icons/black.png" class="legend-image"/></td>
+            <td class="legend-separator"></td>
+            <td class="en-only legend-desc-text">Non-conducting state</td>
+            <td class="sk-only legend-desc-text">Bez vodivosti</td>
+        </tr>
+        <tr>
+            <td><img src="./images/legend_icons/orange.png" class="legend-image"/></td>
+            <td class="legend-separator"></td>
+            <td class="en-only legend-desc-text">Undefined state</td>
+            <td class="sk-only legend-desc-text">Nedefinovaný stav</td>
+        </tr>
+        <tr>
+            <td class="legend-text-symbol">U<sub>DD</sub></td>
+            <td class="legend-separator"></td>
+            <td class="en-only legend-desc-text">Source of voltage</td>
+            <td class="sk-only legend-desc-text">Zdroj napätia</td>
+        </tr>
+        <tr>
+            <td class="legend-text-symbol">GND</td>
+            <td class="legend-separator"></td>
+            <td class="en-only legend-desc-text">Ground</td>
+            <td class="sk-only legend-desc-text">Uzemnenie</td>
+        </tr>
+        <tr>
+            <td class="legend-text-symbol">B</td>
+            <td class="legend-separator"></td>
+            <td class="en-only legend-desc-text">Bulk</td>
+            <td class="sk-only legend-desc-text">Substrát</td>
+        </tr>
+        <tr>
+            <td class="legend-text-symbol">D</td>
+            <td class="legend-separator"></td>
+            <td class="legend-desc-text">Drain</td>
+        </tr>
+        <tr>
+            <td class="legend-text-symbol">G</td>
+            <td class="legend-separator"></td>
+            <td class="en-only legend-desc-text">Gate</td>
+            <td class="sk-only legend-desc-text">Hradlo</td>
+        </tr>
+        <tr>
+            <td class="legend-text-symbol">S</td>
+            <td class="legend-separator"></td>
+            <td class="legend-desc-text">Source</td>
+        </tr>
+    </table>
+</section>
