@@ -1,6 +1,86 @@
-<h2 class="en-only">Options</h2>
-<h2 class="sk-only">Možnosti</h2>
-<button class="en-only" disabled>Prev</button>
-<button class="sk-only" disabled>Späť</button>
-<button class="en-only" onclick="initializeAnimation('nor')">Next</button>
-<button class="sk-only" onclick="initializeAnimation('nor')">Ďalej</button>
+<div>
+    <button class="en-only animation-button animation-button-disabled" disabled>Prev</button>
+    <button class="sk-only animation-button animation-button-disabled" disabled>Späť</button>
+    <button class="en-only animation-button" onclick="initializeAnimation('nor')">Next</button>
+    <button class="sk-only animation-button" onclick="initializeAnimation('nor')">Ďalej</button>
+</div>
+<div>
+    <table class="legend-table">
+        <thead>
+            <tr>
+                <td class="en-only" colspan="3">Legend</td>
+                <td class="sk-only" colspan="3">Legenda</td>
+            </tr>
+        </thead>
+        <tr>
+            <td><img src="./images/legend_icons/electron.jpg" class="legend-image" /></td>
+            <td class="legend-separator"></td>
+            <td class="en-only legend-desc-text">Negatively charged particle</td>
+            <td class="sk-only legend-desc-text">Záporne nabitá častica</td>
+        </tr>
+        <tr>
+            <td><img src="./images/legend_icons/protone.jpg" class="legend-image" /></td>
+            <td class="legend-separator"></td>
+            <td class="en-only legend-desc-text">Positively charged particle</td>
+            <td class="sk-only legend-desc-text">Kladne nabitá častica</td>
+        </tr>
+        <tr>
+            <td><img src="./images/legend_icons/blueDoped.jpg" class="legend-image"/></td>
+            <td class="legend-separator"></td>
+            <td class="en-only legend-desc-text">Highly doped semiconductor of type n</td>
+            <td class="sk-only legend-desc-text">Vysoko dopovaný polovodič n typu</td>
+        </tr>
+        <tr>
+            <td><img src="./images/legend_icons/redDoped.jpg" class="legend-image" /></td>
+            <td class="legend-separator"></td>
+            <td class="en-only legend-desc-text">Highly doped semiconductor of type p</td>
+            <td class="sk-only legend-desc-text">Vysoko dopovaný polovodič p typu</td>
+        </tr>
+        <tr>
+            <td><img src="./images/legend_icons/blueRect.jpg" class="legend-image" /></td>
+            <td class="legend-separator"></td>
+            <td class="en-only legend-desc-text">Semiconductor n area</td>
+            <td class="sk-only legend-desc-text">Oblasť polovodiča n typu</td>
+        </tr>
+        <tr>
+            <td><img src="./images/legend_icons/pinkRect.jpg" class="legend-image" /></td>
+            <td class="legend-separator"></td>
+            <td class="en-only legend-desc-text">Semiconductor p area</td>
+            <td class="sk-only legend-desc-text">Oblasť polovodiča p typu</td>
+        </tr>
+        <tr>
+            <td><img src="./images/legend_icons/greenRect.jpg" class="legend-image" /></td>
+            <td class="legend-separator"></td>
+            <td class="en-only legend-desc-text">Space charge area</td>
+            <td class="sk-only legend-desc-text">Oblasť priestorového náboja</td>
+        </tr>
+        <tr>
+            <td class="legend-text-symbol">U<sub>DD</sub></td>
+            <td class="legend-separator"></td>
+            <td class="en-only legend-desc-text">Source of voltage</td>
+            <td class="sk-only legend-desc-text">Zdroj napätia</td>
+        </tr>
+        <tr>
+            <td class="legend-text-symbol">B</td>
+            <td class="legend-separator"></td>
+            <td class="en-only legend-desc-text">Bulk</td>
+            <td class="sk-only legend-desc-text">Substrát</td>
+        </tr>
+        <tr>
+            <td class="legend-text-symbol">D</td>
+            <td class="legend-separator"></td>
+            <td class="legend-desc-text">Drain</td>
+        </tr>
+        <tr>
+            <td class="legend-text-symbol">G</td>
+            <td class="legend-separator"></td>
+            <td class="en-only legend-desc-text">Gate</td>
+            <td class="sk-only legend-desc-text">Hradlo</td>
+        </tr>
+        <tr>
+            <td class="legend-text-symbol">S</td>
+            <td class="legend-separator"></td>
+            <td class="legend-desc-text">Source</td>
+        </tr>
+    </table>
+</div>

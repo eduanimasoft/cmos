@@ -1,50 +1,74 @@
-<div class="nor-options">
+<div class="options-div">
     <h2 class="en-only">Options</h2>
     <h2 class="sk-only">Možnosti</h2>
-    <label for="value-for-a">A = </label>
-    <select id="value-for-a" class="invertor-a-value" value="A" onChange="toggleNorCircuit()">
-        <option value="0" selected>0</option>
-        <option value="1">1</option>
-    </select>
-    <label for="value-for-b">B = </label>
-    <select id="value-for-b" class="invertor-b-value" value="B" onChange="toggleNorCircuit()">
-        <option value="0" selected>0</option>
-        <option value="1">1</option>
-    </select>
+    <div class="input-selection">
+        <label for="value-for-a" class="select-title">A </label>
+        <select id="value-for-a" class="invertor-a-value select-element" value="A" onChange="toggleNorCircuit()">
+            <option value="0" selected>0</option>
+            <option value="1">1</option>
+        </select>
+    </div>
+    <div class="input-selection">
+        <label for="value-for-b" class="select-title">B </label>
+        <select id="value-for-b" class="invertor-b-value select-element" value="B" onChange="toggleNorCircuit()">
+            <option value="0" selected>0</option>
+            <option value="1">1</option>
+        </select>
+    </div>
+    <div>
+        <button class="sk-only animation-button" onClick="showDetailedSymbols();">Viac</button>
+        <button class="en-only animation-button" onClick="showDetailedSymbols();">More</button>
+    </div>
 </div>
-<button class="sk-only" onClick="showDetailedSymbols();">Viac</button>
-<button class="en-only" onClick="showDetailedSymbols();">More</button>
-<button class="en-only" onclick="initializeAnimation('cmos_intro')">Prev</button>
-<button class="sk-only" onclick="initializeAnimation('cmos_intro')">Späť</button>
-<button class="en-only" onclick="initializeAnimation('nand')">Next</button>
-<button class="sk-only" onclick="initializeAnimation('nand')">Ďalej</button>
-<section class="legend">
+<div class="animation-nav-buttons">
+    <button class="en-only animation-button" onclick="initializeAnimation('cmos_intro')">Prev</button>
+    <button class="sk-only animation-button" onclick="initializeAnimation('cmos_intro')">Späť</button>
+    <button class="en-only animation-button" onclick="initializeAnimation('nand')">Next</button>
+    <button class="sk-only animation-button" onclick="initializeAnimation('nand')">Ďalej</button>
+</div>
+<div class="legend-table-div">
     <table class="legend-table">
-        <caption class="en-only">Legend</caption>
-        <caption class="sk-only">Legenda</caption>
+        <thead>
+            <tr>
+                <td class="en-only" colspan="3">Legend</td>
+                <td class="sk-only" colspan="3">Legenda</td>
+            </tr>
+        </thead>
         <tr>
-            <td><img src="./images/legend_icons/green.png" class="legend-image"/></td>
+            <td><img src="./images/legend_icons/greenLine.jpg" class="legend-image"/></td>
             <td class="legend-separator"></td>
             <td class="en-only legend-desc-text">Applied voltage</td>
             <td class="sk-only legend-desc-text">Pod napätím</td>
         </tr>
         <tr>
-            <td><img src="./images/legend_icons/red.png" class="legend-image"/></td>
+            <td><img src="./images/legend_icons/redLine.jpg" class="legend-image"/></td>
             <td class="legend-separator"></td>
             <td class="en-only legend-desc-text">Ground</td>
             <td class="sk-only legend-desc-text">Uzemnenie</td>
         </tr>
         <tr>
-            <td><img src="./images/legend_icons/black.png" class="legend-image"/></td>
+            <td><img src="./images/legend_icons/blackLine.jpg" class="legend-image"/></td>
             <td class="legend-separator"></td>
             <td class="en-only legend-desc-text">Non-conducting state</td>
             <td class="sk-only legend-desc-text">Bez vodivosti</td>
         </tr>
         <tr>
-            <td><img src="./images/legend_icons/orange.png" class="legend-image"/></td>
+            <td><img src="./images/legend_icons/orangeLine.jpg" class="legend-image"/></td>
             <td class="legend-separator"></td>
             <td class="en-only legend-desc-text">Undefined state</td>
             <td class="sk-only legend-desc-text">Nedefinovaný stav</td>
+        </tr>
+        <tr>
+            <td class="legend-text-symbol">T<sub>A<sub>p</sub></sub></td>
+            <td class="legend-separator"></td>
+            <td class="en-only legend-desc-text">Transistor A of type p</td>
+            <td class="sk-only legend-desc-text">Tranzistor A typu p</td>
+        </tr>
+        <tr>
+            <td class="legend-text-symbol">T<sub>A<sub>n</sub></sub></sub></td>
+            <td class="legend-separator"></td>
+            <td class="en-only legend-desc-text">Transistor A of type n</td>
+            <td class="sk-only legend-desc-text">Tranzistor A typu n</td>
         </tr>
         <tr>
             <td class="legend-text-symbol">U<sub>DD</sub></td>
@@ -81,4 +105,4 @@
             <td class="legend-desc-text">Source</td>
         </tr>
     </table>
-</section>
+</div>

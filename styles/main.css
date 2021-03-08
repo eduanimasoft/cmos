@@ -2,6 +2,9 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  --nav-title-color: rgb(250, 150, 0);
+  --td-common-height: 45px;
+  --td-common-width: 60px;
 }
 
 html {
@@ -38,7 +41,7 @@ nav {
   text-transform: uppercase;
   letter-spacing: 4px;
   font-size: 20px;
-  color: rgb(255, 150, 0);
+  color: var(--nav-title-color);
   text-decoration: none;
 }
 
@@ -180,36 +183,27 @@ nav {
 .animation-container {
   display: none;
   height: var(--main-height);
-  grid-template-columns: 1fr 4fr 2fr;
+  grid-template-columns: 0.1fr 4fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas:
     "return frame options"
-    ". frame legend";
+    ". frame options";
 }
 
 .animation-return-image {
   width: 35px;
   height: 35px;
+  cursor: pointer;
 }
 
 .animation-return-row {
   grid-area: return;
   align-self: up;
   justify-self: left;
-  cursor: pointer;
-}
-
-.animation-legend {
-  grid-area: legend;
-  width: 90%;
-  height: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
 }
 
 .animation-frame {
+  position: relative;
   width: 100%;
   height: 90%;
   grid-area: frame;
@@ -218,13 +212,98 @@ nav {
 }
 
 .animation-options {
+  position: relative;
   grid-area: options;
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 85%;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: space-evenly;
   align-items: center;
+}
+
+.animation-nav-buttons {
+  position: relative;
+  max-width: 100%;
+  max-height: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.options-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+/* Style from https://fdossena.com/?p=html5cool/buttons/i.frag */
+.animation-button {
+  display: inline-block;
+  padding: 0.55em 1.2em;
+  border: 0.1em solid #ff3030;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: var(--navbar-color);
+  text-align: center;
+  transition: all 0.2s;
+  background-color: var(--nav-title-color);
+}
+
+.animation-button-disabled {
+  background-color: white;
+}
+
+.animation-button:hover {
+  color:#000000;
+  background-color:#FFFFFF;
+  cursor:pointer;
+}
+
+.animation-button-disabled:hover {
+  background-color: white;
+  cursor: not-allowed;
+}
+
+.select-element {
+  padding: 8px 12px;
+  color: var(--navbar-color);
+  background-color: var(--nav-title-color);
+  border: 1px solid #dddddd;
+  cursor: pointer;
+  border-radius: 5px;
+  appearance: none;
+  margin: 10px auto;
+  font-weight: bold;
+  font-size: large;
+  min-width: 40px;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+}
+
+.select-element:focus,
+.select-element:hover {
+  outline: none;
+  border: 1px solid #ff0000;
+}
+
+.select-title {
+  font-weight: bold;
+  font-size: large;
+  color: var(--navbar-color);
+}
+
+.select-element option {
+  background: #ffffff;
+  color: var(--navbar-color);
+  font-weight: bold;
 }
 
 .theory-main-container {
@@ -271,9 +350,26 @@ nav {
 Legend-related classes and elements
 */
 
+.legend-table-div {
+  position: relative;
+  width: 100%;
+  justify-content: left;
+}
 
 .legend-table {
-  border: 2px solid black;
+  width: 100%;
+}
+
+.legend-table thead {
+  font-size: large;
+  justify-content: center;
+  text-align: center;
+}
+
+.legend-desc-text {
+  min-height: 50px;
+  /* min-width: var(--td-common-width); */
+  min-width: 180px;
 }
 
 .legend-image {
@@ -283,9 +379,8 @@ Legend-related classes and elements
   max-height: 35px;
 }
 
-
 .legend-separator {
-  width: 20px;
+  min-width: 20px;
 }
 
 .legend-text-symbol {
@@ -303,6 +398,17 @@ This section includes styles for
  - Nand animation
  - Cmos Principle animation
 */
+
+.cmos-title-text {
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.cmos-text-svg {
+  font-size: large;
+  font-weight: bold;
+  font-style: italic;
+}
 
 .intro-title-text-svg {
   font-size: xx-large;
@@ -358,4 +464,24 @@ This section includes styles for
 
 .detailed-symbol-active {
   display: block;
+}
+
+.center-help-div {
+  width: 100%;
+  height: auto;
+  background-color: #eeeeee;
+  text-align: center;
+}
+
+.help-paragraph {
+  display: inline-block;
+  width: 75%;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: 20px;
+}
+
+.help-paragraph p {
+  padding: 15px;
 }

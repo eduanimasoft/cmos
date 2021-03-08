@@ -1,14 +1,109 @@
-<h2 class="en-only">Options</h2>
-<h2 class="sk-only">Možnosti</h2>
-<div class="principle-options">
-    <label for="value-for-a">A = </label>
-    <select id="voltage-select" class="voltage-value" value="A" onChange="togglePrincipleAnimation()">
-        <option value="0" selected>5V log1</option>
-        <option value="1">0V log0</option>
-    </select>
+<div class="options-div">
+    <h2 class="en-only">Options</h2>
+    <h2 class="sk-only">Možnosti</h2>
+    <div class="input-selection">
+        <label for="value-for-a" class="select-title">Ui </label>
+        <select id="voltage-select" class="voltage-value select-element" value="A" onChange="togglePrincipleAnimation()">
+            <option value="0" selected>5V log1</option>
+            <option value="1">0V log0</option>
+        </select>
+    </div>
 </div>
-
-<button class="en-only" onclick="initializeAnimation('invertor')">Prev</button>
-<button class="sk-only" onclick="initializeAnimation('invertor')">Späť</button>
-<button class="en-only" onclick="initializeAnimation('combined')">Next</button>
-<button class="sk-only" onclick="initializeAnimation('combined')">Ďalej</button>
+<div class="animation-nav-buttons">
+    <button class="en-only animation-button" onclick="initializeAnimation('invertor')">Prev</button>
+    <button class="sk-only animation-button" onclick="initializeAnimation('invertor')">Späť</button>
+    <button class="en-only animation-button" onclick="initializeAnimation('combined')">Next</button>
+    <button class="sk-only animation-button" onclick="initializeAnimation('combined')">Ďalej</button>
+</div>
+<div>
+    <table class="legend-table">
+        <thead>
+            <tr>
+                <td class="en-only" colspan="3">Legend</td>
+                <td class="sk-only" colspan="3">Legenda</td>
+            </tr>
+        </thead>
+        <tr>
+            <td><img src="./images/legend_icons/electron.jpg" class="legend-image" /></td>
+            <td class="legend-separator"></td>
+            <td class="en-only legend-desc-text">Negatively charged particle</td>
+            <td class="sk-only legend-desc-text">Záporne nabitá častica</td>
+        </tr>
+        <tr>
+            <td><img src="./images/legend_icons/protone.jpg" class="legend-image" /></td>
+            <td class="legend-separator"></td>
+            <td class="en-only legend-desc-text">Positively charged particle</td>
+            <td class="sk-only legend-desc-text">Kladne nabitá častica</td>
+        </tr>
+        <tr>
+            <td><img src="./images/legend_icons/blueDoped.jpg" class="legend-image" /></td>
+            <td class="legend-separator"></td>
+            <td class="en-only legend-desc-text">Highly doped semiconductor of type n</td>
+            <td class="sk-only legend-desc-text">Vysoko dopovaný polovodič n typu</td>
+        </tr>
+        <tr>
+            <td><img src="./images/legend_icons/redDoped.jpg" class="legend-image" /></td>
+            <td class="legend-separator"></td>
+            <td class="en-only legend-desc-text">Highly doped semiconductor of type p</td>
+            <td class="sk-only legend-desc-text">Vysoko dopovaný polovodič p typu</td>
+        </tr>
+        <tr>
+            <td><img src="./images/legend_icons/blueRect.jpg" class="legend-image" /></td>
+            <td class="legend-separator"></td>
+            <td class="en-only legend-desc-text">Semiconductor n area</td>
+            <td class="sk-only legend-desc-text">Oblasť polovodiča n typu</td>
+        </tr>
+        <tr>
+            <td><img src="./images/legend_icons/pinkRect.jpg" class="legend-image" /></td>
+            <td class="legend-separator"></td>
+            <td class="en-only legend-desc-text">Semiconductor p area</td>
+            <td class="sk-only legend-desc-text">Oblasť polovodiča p typu</td>
+        </tr>
+        <tr>
+            <td><img src="./images/legend_icons/greenRect.jpg" class="legend-image" /></td>
+            <td class="legend-separator"></td>
+            <td class="en-only legend-desc-text">Space charge area</td>
+            <td class="sk-only legend-desc-text">Oblasť priestorového náboja</td>
+        </tr>
+        <tr>
+            <td class="legend-text-symbol">U<sub>i</sub></td>
+            <td class="legend-separator"></td>
+            <td class="en-only legend-desc-text">Input voltage</td>
+            <td class="sk-only legend-desc-text">Vstupné napätie</td>
+        </tr>
+        <tr>
+            <td class="legend-text-symbol">U<sub>o</sub></td>
+            <td class="legend-separator"></td>
+            <td class="en-only legend-desc-text">Output voltage</td>
+            <td class="sk-only legend-desc-text">Výstupné napätie</td>
+        </tr>
+        <tr>
+            <td class="legend-text-symbol">U<sub>DD</sub></td>
+            <td class="legend-separator"></td>
+            <td class="en-only legend-desc-text">Source of voltage</td>
+            <td class="sk-only legend-desc-text">Zdroj napätia</td>
+        </tr>
+        <tr>
+            <td class="legend-text-symbol">B</td>
+            <td class="legend-separator"></td>
+            <td class="en-only legend-desc-text">Bulk</td>
+            <td class="sk-only legend-desc-text">Substrát</td>
+        </tr>
+        <tr>
+            <td class="legend-text-symbol">D</td>
+            <td class="legend-separator"></td>
+            <td class="legend-desc-text">Drain</td>
+        </tr>
+        <tr>
+            <td class="legend-text-symbol">G</td>
+            <td class="legend-separator"></td>
+            <td class="en-only legend-desc-text">Gate</td>
+            <td class="sk-only legend-desc-text">Hradlo</td>
+        </tr>
+        <tr>
+            <td class="legend-text-symbol">S</td>
+            <td class="legend-separator"></td>
+            <td class="legend-desc-text">Source</td>
+        </tr>
+    </table>
+</div>

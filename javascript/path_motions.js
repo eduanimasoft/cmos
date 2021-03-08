@@ -49,7 +49,8 @@ function principleCursorAnimation(begin_end) {
  * @param {any} begin_end - an array of 2 elements, defines a motion start (1st index) and end (2nd index)
  */
 function principleGraphAnimation(begin_end) {
-    [".red-circle", ".green-circle"].forEach((element) => {
+    // was also for ".green-circle"
+    [".red-circle"].forEach((element) => {
         gsap.to(element, {
             duration: mutualDuration,
             yoyo: false,
@@ -63,7 +64,7 @@ function principleGraphAnimation(begin_end) {
               end: begin_end[1]
             }
           });
-    })
+    });
 }
 
 
@@ -73,7 +74,7 @@ function principleGraphAnimation(begin_end) {
  */
 function channelChange(stateNumber) {
     gsap.to(`.no-channel-state-${stateNumber}`, { duration: mutualDuration, attr: {'fill-opacity':0.0}});
-    gsap.to(`.channel-state-${stateNumber}`, { duration: mutualDuration, attr: {'fill-opacity': 1.0}});
+    gsap.to(`.channel-state-${stateNumber}`, { duration: mutualDuration, attr: {'fill-opacity': 0.5}});
 }
 
 

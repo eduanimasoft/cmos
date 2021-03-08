@@ -325,7 +325,7 @@ function toggleCircuit(a, b, stateResult) {
 
 
 function initializeAnimation(animationName) {
-    ['legend', 'options', 'frame'].forEach( (page) => {
+    ['options', 'frame'].forEach( (page) => {
         $(`.animation-${page}`).load(`./animations/${animationName}/${page}.html`, translatePage);
     });
     document.getElementById("main-flexbox-container").style.display="none";
@@ -334,7 +334,7 @@ function initializeAnimation(animationName) {
 
 
 function closeCurrentAnimation() {
-    ['legend', 'options', 'frame'].forEach( (page) => {
+    ['options', 'frame'].forEach( (page) => {
         $(`.animation-${page}`).empty();
     });
     document.getElementById("main-flexbox-container").style.display="flex";
