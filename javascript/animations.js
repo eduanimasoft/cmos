@@ -1,4 +1,6 @@
 let circuit = "";
+let playing = false;
+let audio = null;
 
 /**
  * Auxiliary function
@@ -325,6 +327,7 @@ function toggleCircuit(a, b, stateResult) {
 
 
 function initializeAnimation(animationName) {
+    playing = false;
     ['options', 'frame'].forEach( (page) => {
         $(`.animation-${page}`).load(`./animations/${animationName}/${page}.html`, translatePage);
     });
@@ -339,4 +342,19 @@ function closeCurrentAnimation() {
     });
     document.getElementById("main-flexbox-container").style.display="flex";
     document.getElementById("main-animation-container").style.display="none";
+}
+
+
+function playPauseAudio() {
+    audio = document.getElementById("animation-audio");
+    if (null != audio) {
+        if (!playing) {
+            playing = true;
+            audio.play();
+        } else {
+            playing = false;
+            audio.pause();
+            audio.currentTime = 0;
+        }
+    }
 }

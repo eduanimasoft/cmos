@@ -485,3 +485,11 @@ This section includes styles for
 .help-paragraph p {
   padding: 15px;
 }
+
+.audio-play-icon {
+  width: 100%;
+  height: 100%;
+  max-width: 35px;
+  max-height: 35px;
+  cursor: pointer;
+}
