@@ -343,18 +343,3 @@ function closeCurrentAnimation() {
     document.getElementById("main-flexbox-container").style.display="flex";
     document.getElementById("main-animation-container").style.display="none";
 }
-
-
-function playPauseAudio() {
-    audio = document.getElementById("animation-audio");
-    if (null != audio) {
-        if (!playing) {
-            playing = true;
-            audio.play();
-        } else {
-            playing = false;
-            audio.pause();
-            audio.currentTime = 0;
-        }
-    }
-}
