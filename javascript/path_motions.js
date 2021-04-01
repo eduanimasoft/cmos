@@ -7,7 +7,7 @@
 
 let numberOfParticlesPerType = 11;
 
-let mutualDuration = 3;
+let mutualDuration = 5;
 
 
 /**
@@ -17,9 +17,9 @@ let mutualDuration = 3;
  */
 function changePrincipleColors(stateNumber) {
     let delta = 0.5
-    gsap.to('.orange-undefined-state', {duration: mutualDuration - 1, stroke: '#FFBB00'});
-    gsap.to(`.red-state-${stateNumber}`, {delay: mutualDuration - delta, duration: delta, stroke: '#FF0000'});
-    gsap.to(`.green-state-${stateNumber}`, {delay: mutualDuration - delta, duration: delta, stroke: '#00CC00'});
+    gsap.to('.orange-undefined-state', { duration: mutualDuration - 1, stroke: '#FFBB00' });
+    gsap.to(`.red-state-${stateNumber}`, { delay: mutualDuration - delta, duration: delta, stroke: '#FF0000' });
+    gsap.to(`.green-state-${stateNumber}`, { delay: mutualDuration - delta, duration: delta, stroke: '#00CC00' });
 }
 
 
@@ -33,14 +33,14 @@ function principleCursorAnimation(begin_end) {
         yoyo: true,
         ease: "power1.inOut",
         motionPath: {
-          path: ".cursor-path",
-          align: ".cursor-path",
-          autoRotate: false,
-          alignOrigin: [0.5, 0.5],
-          start: begin_end[1],
-          end: begin_end[0]
+            path: ".cursor-path",
+            align: ".cursor-path",
+            autoRotate: false,
+            alignOrigin: [0.5, 0.5],
+            start: begin_end[1],
+            end: begin_end[0]
         }
-      });
+    });
 }
 
 
@@ -49,21 +49,68 @@ function principleCursorAnimation(begin_end) {
  * @param {any} begin_end - an array of 2 elements, defines a motion start (1st index) and end (2nd index)
  */
 function principleGraphAnimation(begin_end) {
-    // was also for ".green-circle"
-    [".red-circle"].forEach((element) => {
-        gsap.to(element, {
-            duration: mutualDuration,
-            yoyo: false,
-            ease: "power1.inOut",
-            motionPath: {
-              path: `${element}-path`,
-              align: `${element}-path`,
-              autoRotate: false,
-              alignOrigin: [0.5, 0.5],
-              start: begin_end[0],
-              end: begin_end[1]
-            }
-          });
+    let ease_function = "power0";
+    let path1_duration = 1.3, path2_duration = 2.2, path3_duration = 1.5;
+    let path1 = ".green-circle-path1", path2 = ".green-circle-path2", path3 = ".green-circle-path3";
+    if (0 == begin_end[0]) {
+        [path1, path3] = [path3, path1];
+        [path1_duration, path3_duration] = [path3_duration, path1_duration];
+    }
+    gsap.to(".red-circle", {
+        duration: mutualDuration,
+        yoyo: false,
+        ease: ease_function,
+        delay: 0,
+        motionPath: {
+            path: ".red-circle-path",
+            align: ".red-circle-path",
+            autoRotate: false,
+            alignOrigin: [0.5, 0.5],
+            start: begin_end[1],
+            end: begin_end[0]
+        }
+    });
+    gsap.to(".green-circle", {
+        duration: path1_duration,
+        yoyo: false,
+        ease: ease_function,
+        delay: 0,
+        motionPath: {
+            path: path1,
+            align: path1,
+            autoRotate: false,
+            alignOrigin: [0.5, 0.5],
+            start: begin_end[1],
+            end: begin_end[0]
+        }
+    });
+    gsap.to(".green-circle", {
+        duration: path2_duration,
+        yoyo: false,
+        ease: ease_function,
+        delay: path1_duration,
+        motionPath: {
+            path: path2,
+            align: path2,
+            autoRotate: false,
+            alignOrigin: [0.5, 0.5],
+            start: begin_end[1],
+            end: begin_end[0]
+        }
+    });
+    gsap.to(".green-circle", {
+        duration: path3_duration,
+        yoyo: false,
+        ease: ease_function,
+        delay: path1_duration + path2_duration,
+        motionPath: {
+            path: path3,
+            align: path3,
+            autoRotate: false,
+            alignOrigin: [0.5, 0.5],
+            start: begin_end[1],
+            end: begin_end[0]
+        }
     });
 }
 
@@ -73,8 +120,8 @@ function principleGraphAnimation(begin_end) {
  * @param {any} stateNumber - defines a state in which the animation is
  */
 function channelChange(stateNumber) {
-    gsap.to(`.no-channel-state-${stateNumber}`, { duration: mutualDuration, attr: {'fill-opacity':0.0}});
-    gsap.to(`.channel-state-${stateNumber}`, { duration: mutualDuration, attr: {'fill-opacity': 0.5}});
+    gsap.to(`.no-channel-state-${stateNumber}`, { duration: mutualDuration, attr: { 'fill-opacity': 0.0 } });
+    gsap.to(`.channel-state-${stateNumber}`, { duration: mutualDuration, attr: { 'fill-opacity': 0.5 } });
 }
 
 
@@ -90,13 +137,13 @@ function moveParticle(begin_end, particle) {
             duration: mutualDuration,
             yoyo: true,
             ease: "power1.inOut",
-            motionPath:{
-            path: `.${particle}-${i}-path`,
-            align: `.${particle}-${i}-path`,
-            autoRotate: false,
-            alignOrigin: [0.5, 0.5],
-            start: begin_end[1],
-            end: begin_end[0],
+            motionPath: {
+                path: `.${particle}-${i}-path`,
+                align: `.${particle}-${i}-path`,
+                autoRotate: false,
+                alignOrigin: [0.5, 0.5],
+                start: begin_end[1],
+                end: begin_end[0],
             }
         });
     }
@@ -109,7 +156,7 @@ function moveParticle(begin_end, particle) {
  * @param {any} stateNumber - defines a state in which the animation is
  */
 function principleParticlesAnimation(begin_end, stateNumber) {
-    ['proton', 'electron'].forEach( (particle) => {
+    ['proton', 'electron'].forEach((particle) => {
         moveParticle(begin_end, particle);
     });
     channelChange(stateNumber);

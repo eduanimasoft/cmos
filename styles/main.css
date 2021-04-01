@@ -1,13 +1,13 @@
 * {
   margin: 0px;
   padding: 0px;
-  box-sizing: border-box;
   --nav-title-color: rgb(250, 150, 0);
   --td-common-height: 45px;
   --td-common-width: 60px;
 }
 
 html {
+  box-sizing: border-box;
   height: 100vh;
 }
 
@@ -191,7 +191,7 @@ nav {
 .animation-container {
   display: none;
   height: var(--main-height);
-  grid-template-columns: 0.1fr 4fr 1fr;
+  grid-template-columns: 0.1fr 4fr 0.8fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas:
     "return frame options"
@@ -222,30 +222,26 @@ nav {
 .animation-options {
   position: relative;
   grid-area: options;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 0.1fr 5fr;
+  grid-template-areas: 
+    "mainoptions" "navbuttons" "legendtable";
 }
 
 .animation-nav-buttons {
   position: relative;
-  max-width: 100%;
-  max-height: 25%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  grid-area: navbuttons;
+  display: inline-block;
+  justify-self: center;
+  padding: 20px;
 }
 
 .options-div {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  width: 100%;
-  height: 25vh;
+  grid-area: mainoptions;
 }
 
 /* Style from https://fdossena.com/?p=html5cool/buttons/i.frag */
@@ -362,7 +358,10 @@ Legend-related classes and elements
 .legend-table-div {
   position: relative;
   width: 100%;
-  justify-content: left;
+  height: 100%;
+  /* justify-content: left; */
+  justify-self: center;
+  grid-area: legendtable;
 }
 
 .legend-table {
@@ -370,8 +369,7 @@ Legend-related classes and elements
 }
 
 tr {
-  min-height: 50px;
-  margin: 3px auto;
+  line-height: 27px;
 }
 
 .legend-table thead {
